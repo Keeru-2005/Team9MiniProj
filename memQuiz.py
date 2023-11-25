@@ -2,30 +2,49 @@ print('Welcome to Meme Quiz2023!')
 print('Python Project')
 from tkinter import *
 import random
-movie_q={1:'question1',2:'question2',3:'question3',4:'question4',5:'question5',6:'question6',7:'question7',8:'question8',9:'question9',10:'question10'}
-movie_a={1:('crt ans','c1','c2','c3','c4'),2:('crt ans','c1','c2','c3','c4'),3:('crt ans','c1','c2','c3','c4'),4:('crt ans','c1','c2','c3','c4'),5:('crt ans','c1','c2','c3','c4'),6:('crt ans','c1','c2','c3','c4'),7:('crt ans','c1','c2','c3','c4'),8:('crt ans','c1','c2','c3','c4'),9:('crt ans','c1','c2','c3','c4'),10:('crt ans','c1','c2','c3','c4')}
+from data import travel_q
+from data import travel_a
 root=Tk()
 root.geometry('700x600')
 n=1
-
-def m():
+score=0
+index=1
+def sel(chb,ans):
+    global index,score
+    if chb['text']==ans[index][0]:
+        score+=10
+    index+=1
+    
+def T():
     rootm=Toplevel()
+    rootm.geometry('500x500')
+    rootm.withdraw()
+    rootm.deiconify()
     def qa(n):
-        if n in movie_q:
-            label=Label(rootm,text='Your question:')
+        rootm.withdraw()
+        rootm.deiconify()
+        if n in travel_q:
+            label=Label(rootm,text='Your question:',padx=100)
             label.grid(row=4,column=4)
-            labelQ=Label(rootm,text=movie_q[n])
+            labelQ=Label(rootm,text=travel_q[n])
             labelQ.grid(row=6,column=2)
             ch=IntVar()
-            for i in range(1,5):
-                chb=Radiobutton(rootm,variable=ch,value=i,text=movie_a[n][i])
-                chb.grid(row=i+7,column=3)
+            
+            chb1=Radiobutton(rootm,variable=ch,value=1,text=travel_a[n][1],command=lambda: sel(chb1,travel_a),padx=105)
+            chb1.grid(row=10,column=2)
+            chb2=Radiobutton(rootm,variable=ch,value=2,text=travel_a[n][2],command=lambda: sel(chb2,travel_a),padx=105)
+            chb2.grid(row=11,column=2)
+            chb3=Radiobutton(rootm,variable=ch,value=3,text=travel_a[n][3],command=lambda: sel(chb3,travel_a),padx=105)
+            chb3.grid(row=12,column=2)
+            chb4=Radiobutton(rootm,variable=ch,value=4,text=travel_a[n][4],command=lambda: sel(chb4,travel_a),padx=105)
+            chb4.grid(row=13,column=2)
             
             nextB=Button(rootm,text="Next",command=lambda:qa(n+1))
-            nextB.grid(row=12,column=10)
+            nextB.grid(row=20,column=4)
         else:
-            print('thanks')
+            sclabel=Label(rootm,text="your score :"+str(score))
+            sclabel.grid(row=3,column=3)
     qa(n)
-movie_b=Button(root,text='movie',command=m)
+movie_b=Button(root,text='Travel',command=T)
 movie_b.grid(row=6,column=6)
 mainloop()
