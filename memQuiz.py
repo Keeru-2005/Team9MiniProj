@@ -18,7 +18,7 @@ def sel(chb,ans):
     
 def T():
     rootm=Toplevel()
-    rootm.geometry('500x500')
+    rootm.geometry('800x500')
     rootm.withdraw()
     rootm.deiconify()
     def qa(n):
@@ -27,8 +27,8 @@ def T():
         if n in travel_q:
             label=Label(rootm,text='Your question:',padx=100)
             label.grid(row=4,column=2)
-            labelQ=Label(rootm,text=travel_q[n])
-            labelQ.grid(row=6,column=2)
+            labelQ=Label(rootm,text=travel_q[n],width=100,wraplength=600)
+            labelQ.grid(row=6,column=2,sticky='W')
             ch=IntVar()
             
             chb1=Radiobutton(rootm,variable=ch,value=1,text=travel_a[n][1],command=lambda: sel(chb1,travel_a),padx=105)
