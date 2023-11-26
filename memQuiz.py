@@ -11,8 +11,9 @@ score=0
 index=1
 def sel(chb,ans):
     global index,score
-    if chb['text']==ans[index][0]:
-        score+=10
+    if index in ans:
+        if chb['text']==ans[index][0]:
+            score+=10
     index+=1
     
 def T():
@@ -25,7 +26,7 @@ def T():
         rootm.deiconify()
         if n in travel_q:
             label=Label(rootm,text='Your question:',padx=100)
-            label.grid(row=4,column=4)
+            label.grid(row=4,column=2)
             labelQ=Label(rootm,text=travel_q[n])
             labelQ.grid(row=6,column=2)
             ch=IntVar()
@@ -40,11 +41,11 @@ def T():
             chb4.grid(row=13,column=2)
             
             nextB=Button(rootm,text="Next",command=lambda:qa(n+1))
-            nextB.grid(row=20,column=4)
+            nextB.grid(row=20,column=2)
         else:
             sclabel=Label(rootm,text="your score :"+str(score))
-            sclabel.grid(row=3,column=3)
+            sclabel.grid(row=23,column=2)
     qa(n)
-movie_b=Button(root,text='Travel',command=T)
-movie_b.grid(row=6,column=6)
+travel_b=Button(root,text='Travel',command=T)
+travel_b.grid(row=6,column=6)
 mainloop()
