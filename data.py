@@ -60,16 +60,16 @@ books_q={1:" J.R.R. Tolkien wrote 'The Hobbit.' What is the name of the hobbit p
          9:"Alongside Hercule Poirot, Agatha Christie created another famous detective character. What is the name of this other detective?",
          10:"Which March sister gets married first, in the book 'Little Women'?"}
 
-books_a={1:("Frodo Baggins","Gandalf","Bilbo Baggins","Smaug"),
-         2:("The Basilisk","Erumpent","Dobby","Augurey"),
-         3:("Camp Zeus","Camp Half Blood","Camp Prophecy","Camp Olympians"),
-         4:("A Flight Of Pigeons","The Room On The Roof","Children's Omnibus","The Hidden Pool"),
-         5:("George Heffley","Ronald Heffley","Gerald Heffley","Rodrick Heffley"),
-         6:("Veruca Salt","Violet Beauregarde","Mike Teavee","Augustus Gloop"),
-         7:("Judge","Attorney","Carpenter","Police Officer"),
-         8:("Franklin W. Dixon","Roald Dahl","Ruskin Bond","John Steinbeck"),
-         9:("Miss Marple","Mary Debenham","Dr. Constantine","Edward Ratchett"),
-         10:("Jo March","Meg March","Amy March","Beth March")}
+books_a={1:("Bilbo Baggins","Frodo Baggins","Gandalf","Bilbo Baggins","Smaug"),
+         2:("Dobby","The Basilisk","Erumpent","Dobby","Augurey"),
+         3:("Camp Half Blood","Camp Zeus","Camp Half Blood","Camp Prophecy","Camp Olympians"),
+         4:("The Room On The Roof","A Flight Of Pigeons","The Room On The Roof","Children's Omnibus","The Hidden Pool"),
+         5:("Rodrick Heffley","George Heffley","Ronald Heffley","Gerald Heffley","Rodrick Heffley"),
+         6:("Violet Beauregarde","Veruca Salt","Violet Beauregarde","Mike Teavee","Augustus Gloop"),
+         7:("Attorney","Judge","Attorney","Carpenter","Police Officer"),
+         8:("Franklin W. Dixon","Franklin W. Dixon","Roald Dahl","Ruskin Bond","John Steinbeck"),
+         9:("Miss Marple","Miss Marple","Mary Debenham","Dr. Constantine","Edward Ratchett"),
+         10:("Meg March","Jo March","Meg March","Amy March","Beth March")}
 
 #PYTHON
 
@@ -84,16 +84,16 @@ python_q={1:" How do you comment out multiple lines in Python?",
           9:"What is the purpose of the lambda keyword in Python?",
           10:"How do you concatenate two lists in Python?"}
 
-python_a={1:('// Comment','/* Comment */','# Comment','-- Comment',),
-          2:('17','20','27','0'),
-          3:("Returns the length of a list or string","Computes the logarithm in base 10","Returns the largest item in an iterable","Converts a value to lowercase"),
-          4:("key in dictionary","dictionary.contains(key)","dictionary[key] != None","contains(dictionary, key)"),
-          5:("Tuples are mutable, and lists are immutable","Tuples are ordered, and lists are unordered","Tuples can contain elements of different data types, while lists cannot","Tuples use square brackets, and lists use parentheses"),
-          6:("To compress a file","To create a zip file","To combine two or more iterables element-wise","To unzip a file"),
-          7:("file = open('example.txt', 'r')","file = open('example.txt', 'w')","file = open('example.txt', 'a')","file = open('example.txt', 'rb')"),
-          8:('12','81','90','16'),
-          9:("To declare a variable","To create an anonymous function","To import a module","To define a class"),
-          10:("list1.join(list2)","list1 + list2","concat(list1, list2)","list1.concatenate(list2)")}
+python_a={1:('/* Comment */','// Comment','/* Comment */','# Comment','-- Comment',),
+          2:('17','17','20','27','0'),
+          3:("Returns the length of a list or string","Returns the length of a list or string","Computes the logarithm in base 10","Returns the largest item in an iterable","Converts a value to lowercase"),
+          4:("key in dictionary","key in dictionary","dictionary.contains(key)","dictionary[key] != None","contains(dictionary, key)"),
+          5:("Tuples are mutable, and lists are immutable","Tuples are mutable, and lists are immutable","Tuples are ordered, and lists are unordered","Tuples can contain elements of different data types, while lists cannot","Tuples use square brackets, and lists use parentheses"),
+          6:("To combine two or more iterables element-wise","To compress a file","To create a zip file","To combine two or more iterables element-wise","To unzip a file"),
+          7:("file = open('example.txt', 'rb')","file = open('example.txt', 'r')","file = open('example.txt', 'w')","file = open('example.txt', 'a')","file = open('example.txt', 'rb')"),
+          8:('81','12','81','90','16'),
+          9:("To create an anonymous function","To declare a variable","To create an anonymous function","To import a module","To define a class"),
+          10:("list1 + list2","list1.join(list2)","list1 + list2","concat(list1, list2)","list1.concatenate(list2)")}
 
 #SPORTS
 
@@ -121,4 +121,29 @@ sports_a={1:('Brendon McCullum','Chris Gayle','Brendon McCullum','Virat Kohli','
           10:('Anil Kumble ','Kapil Dev ','Anil Kumble ','Harbhajan Singh ','Ravichandran Ashwin')}
 
 #MATHS
+
+math_q={1:"",
+        2:"",
+        3:"",
+        4:"",
+        5:"",
+        6:"",
+        7:"",
+        8:"",
+        9:"",
+        10:""}
+
+
+
+math_a={1:(),
+        2:(),
+        3:(),
+        4:(),
+        5:(),
+        6:(),
+        7:(),
+        8:(),
+        9:(),
+        10:()}
+
 
