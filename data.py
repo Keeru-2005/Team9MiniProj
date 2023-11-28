@@ -1,10 +1,29 @@
-travel_q={1:'What is the capital of Australia?',2:' Which country is known as the Land of the Rising Sun?',3:'Which is the largest desert in the world?',4:' The Great Barrier Reef is off the coast of which country?',5:'What is the worlds busiest airport by passenger traffic?'
-,6:'In which city would you find the famous Shibuya Crossing?',7:'The Ajanta Caves, known for their Buddhist cave paintings, are in which Indian state?',8:'The Louvre,an art and civilization museum,is located in which Middle Eastern country?',9:'Yellowstone National Park, known for its geothermal features, is primarily located in which U.S. state?',10:'How many pyramids are there at the Giza Plateau in Egypt?'}
-travel_a={1:('Canberra','Melbourne','Perth','Canberra','Sydney'),2:('Japan','Nepal','Japan','Indonesia','Ecuador'),3:('Antarctic','Arctic','Sahara','Antarctic','Thar'),4:('Queensland, Australia','Queensland, Australia','Maldives','Mauritius','Thailand'),5:('Dubai International Airport','John F. Kennedy International Airport,New York','Dubai International Airport','Heathrow Airport,London',
-'Changi Airport,Singapore'),6:('Japan','China','Japan','South Korea','Indonesia'),7:('Maharashtra','Odisha','Maharashtra','Kerala','Karnataka'),8:('UAE','Qatar','Oman','UAE','Egypt'),9:('Wyoming','California','Wyoming','Texas','Indiana'),10:('Three','Three','Five','Seven','Two')}
+#TRAVEL
+travel_q={1:'What is the capital of Australia?',
+          2:' Which country is known as the Land of the Rising Sun?',
+          3:'Which is the largest desert in the world?',
+          4:' The Great Barrier Reef is off the coast of which country?',
+          5:'What is the worlds busiest airport by passenger traffic?',
+          6:'In which city would you find the famous Shibuya Crossing?',
+          7:'The Ajanta Caves, known for their Buddhist cave paintings, are in which Indian state?',
+          8:'The Louvre,an art and civilization museum,is located in which Middle Eastern country?',
+          9:'Yellowstone National Park, known for its geothermal features, is primarily located in which U.S. state?',
+          10:'How many pyramids are there at the Giza Plateau in Egypt?'}
+
+travel_a={1:('Canberra','Melbourne','Perth','Canberra','Sydney'),
+          2:('Japan','Nepal','Japan','Indonesia','Ecuador'),
+          3:('Antarctic','Arctic','Sahara','Antarctic','Thar'),
+          4:('Queensland, Australia','Queensland, Australia','Maldives','Mauritius','Thailand'),
+          5:('Dubai International Airport','John F. Kennedy International Airport,New York','Dubai International Airport','Heathrow Airport,London','Changi Airport,Singapore'),
+          6:('Japan','China','Japan','South Korea','Indonesia'),
+          7:('Maharashtra','Odisha','Maharashtra','Kerala','Karnataka'),
+          8:('UAE','Qatar','Oman','UAE','Egypt'),
+          9:('Wyoming','California','Wyoming','Texas','Indiana'),
+          10:('Three','Three','Five','Seven','Two')}
 
 
 #MOVIES
+
 movie_q={1:'What is the name of the fictional African country in the movie "Black Panther"?',
          2:"What is the name of the artificial intelligence system that assists the Avengers and is housed in Tony Stark's Iron Man suit?",
          3:"Which Disney Princess is known for her long, magical hair?",
@@ -41,7 +60,16 @@ books_q={1:" J.R.R. Tolkien wrote 'The Hobbit.' What is the name of the hobbit p
          9:"Alongside Hercule Poirot, Agatha Christie created another famous detective character. What is the name of this other detective?",
          10:"Which March sister gets married first, in the book 'Little Women'?"}
 
-books_a={}
+books_a={1:("Frodo Baggins","Gandalf","Bilbo Baggins","Smaug"),
+         2:("The Basilisk","Erumpent","Dobby","Augurey"),
+         3:("Camp Zeus","Camp Half Blood","Camp Prophecy","Camp Olympians"),
+         4:("A Flight Of Pigeons","The Room On The Roof","Children's Omnibus","The Hidden Pool"),
+         5:("George Heffley","Ronald Heffley","Gerald Heffley","Rodrick Heffley"),
+         6:("Veruca Salt","Violet Beauregarde","Mike Teavee","Augustus Gloop"),
+         7:("Judge","Attorney","Carpenter","Police Officer"),
+         8:("Franklin W. Dixon","Roald Dahl","Ruskin Bond","John Steinbeck"),
+         9:("Miss Marple","Mary Debenham","Dr. Constantine","Edward Ratchett"),
+         10:("Jo March","Meg March","Amy March","Beth March")}
 
 #PYTHON
 
@@ -56,6 +84,41 @@ python_q={1:" How do you comment out multiple lines in Python?",
           9:"What is the purpose of the lambda keyword in Python?",
           10:"How do you concatenate two lists in Python?"}
 
-python_a={}
-sports_q={1:' Who is the only player to have scored a century in all three formats of international cricket (Tests, ODIs, T20Is)?',2:' Which stadium is known as the "Home of Cricket"?',3:" Which player has won the most Ballon d'Or awards?", 4:" Who holds the record for the highest individual score in a Test inning? ", 5:"Who is the all-time leading goal scorer for the Brazilian national team? ", 6:"In tennis scoring, what does '40-30' represent?", 7:"Which Grand Slam tournament is played on grass courts? ",8:"Who is the first male player from India to win a silver medal in badminton at the Olympic Games?", 9:"In which sport did Abhinav Bindra win India's first individual gold medal at the Olympic Games?", 10:"Who is the first Indian cricketer to take 10 wickets in a Test inning?"}
-sports_a={1:('Brendon McCullum','Chris Gayle','Brendon McCullum','Virat Kohli','AB de Villiers'),2:("Lord's Cricket Ground","Lord's Cricket Ground",'Melbourne Cricket Ground','Eden Gardens ','The Oval'),3:('Lionel Messi ','Lionel Messi ','Cristiano Ronaldo','Michel Platini','Johan Cruyff'),4:('Brian Lara ','Brian Lara ','Sachin Tendulkar ','Virender Sehwag ','Ricky Ponting'), 5:('Pele ','Ronaldo Nazário ','Pele ','Romario','Neymar'), 6:("Server is leading by one point ","Server is leading by one point ",'Server is leading by two points','Receiver is leading by one point ','Receiver is leading by two points'), 7:('Wimbledon ','Australian Open','French Open','Wimbledon ','US Open') , 8: ('P. Gopichand','Prakash Padukone ','P. Gopichand','Saina Nehwal ','Kidambi Srikanth') ,9: ('Shooting','Shooting','Archery ','Boxing','Weightlifting'), 10:('Anil Kumble ','Kapil Dev ','Anil Kumble ','Harbhajan Singh ','Ravichandran Ashwin')}
+python_a={1:('// Comment','/* Comment */','# Comment','-- Comment',),
+          2:('17','20','27','0'),
+          3:("Returns the length of a list or string","Computes the logarithm in base 10","Returns the largest item in an iterable","Converts a value to lowercase"),
+          4:("key in dictionary","dictionary.contains(key)","dictionary[key] != None","contains(dictionary, key)"),
+          5:("Tuples are mutable, and lists are immutable","Tuples are ordered, and lists are unordered","Tuples can contain elements of different data types, while lists cannot","Tuples use square brackets, and lists use parentheses"),
+          6:("To compress a file","To create a zip file","To combine two or more iterables element-wise","To unzip a file"),
+          7:("file = open('example.txt', 'r')","file = open('example.txt', 'w')","file = open('example.txt', 'a')","file = open('example.txt', 'rb')"),
+          8:('12','81','90','16'),
+          9:("To declare a variable","To create an anonymous function","To import a module","To define a class"),
+          10:("list1.join(list2)","list1 + list2","concat(list1, list2)","list1.concatenate(list2)")}
+
+#SPORTS
+
+sports_q={1:' Who is the only player to have scored a century in all three formats of international cricket (Tests, ODIs, T20Is)?',
+          2:' Which stadium is known as the "Home of Cricket"?',
+          3:" Which player has won the most Ballon d'Or awards?",
+          4:" Who holds the record for the highest individual score in a Test inning? ", 
+          5:"Who is the all-time leading goal scorer for the Brazilian national team? ", 
+          6:"In tennis scoring, what does '40-30' represent?",
+          7:"Which Grand Slam tournament is played on grass courts?",
+          8:"Who is the first male player from India to win a silver medal in badminton at the Olympic Games?",
+          9:"In which sport did Abhinav Bindra win India's first individual gold medal at the Olympic Games?",
+         10:"Who is the first Indian cricketer to take 10 wickets in a Test inning?"}
+
+
+sports_a={1:('Brendon McCullum','Chris Gayle','Brendon McCullum','Virat Kohli','AB de Villiers'),
+          2:("Lord's Cricket Ground","Lord's Cricket Ground",'Melbourne Cricket Ground','Eden Gardens ','The Oval'),
+          3:('Lionel Messi ','Lionel Messi ','Cristiano Ronaldo','Michel Platini','Johan Cruyff'),
+          4:('Brian Lara ','Brian Lara ','Sachin Tendulkar ','Virender Sehwag ','Ricky Ponting'),
+          5:('Pele ','Ronaldo Nazário ','Pele ','Romario','Neymar'),
+          6:("Server is leading by one point ","Server is leading by one point ",'Server is leading by two points','Receiver is leading by one point ','Receiver is leading by two points'), 
+          7:('Wimbledon ','Australian Open','French Open','Wimbledon ','US Open') ,
+          8: ('P. Gopichand','Prakash Padukone ','P. Gopichand','Saina Nehwal ','Kidambi Srikanth'),
+          9: ('Shooting','Shooting','Archery ','Boxing','Weightlifting'), 
+          10:('Anil Kumble ','Kapil Dev ','Anil Kumble ','Harbhajan Singh ','Ravichandran Ashwin')}
+
+#MATHS
+
