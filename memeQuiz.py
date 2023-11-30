@@ -2,8 +2,8 @@ print('Welcome to Meme Quiz2023!')
 print('Python Project')
 from tkinter import *
 import random
-from data import travel_q
-from data import travel_a
+from data import *
+
 root=Tk()
 root.state('zoomed')
 root.configure(background= "#F49393")
@@ -46,8 +46,29 @@ def T():
             sclabel=Label(rootm,text="your score :"+str(score))
             sclabel.grid(row=23,column=2)
     qa(n)
-travel_b=Button(root,text='Travel',command=T)
+travel_b=Button(root,text='TRAVEL',command=T,font="Times 15 bold",bg='#F21368',width=10,height=3)
 #travel_b=("Bell Gothic Std Black",20,"bold")
 #travel_b.configure(font=travel_b)
-travel_b.place(x=700,y=200)
+travel_b.place(x=300,y=250,anchor='center')
+
+travel_b1=Button(root,text='BOOKS',font="Times 15 bold",bg='#F21368',width=10,height=3)
+travel_b1.place(x=650,y=250,anchor='center')
+
+travel_b5=Button(root,text='SPORTS',font="Times 15 bold",bg='#F21368',width=10,height=3)
+travel_b5.place(x=1000,y=250,anchor='center')
+
+travel_b2=Button(root,text='PYTHON',font="Times 15 bold",bg='#F21368',width=10,height=3)
+travel_b2.place(x=300,y=450,anchor='center')
+
+travel_b3=Button(root,text='MOVIES',font="Times 15 bold",bg='#F21368',width=10,height=3)
+travel_b3.place(x=650,y=450,anchor='center')
+
+travel_b4=Button(root,text='ANIMALS',font="Times 15 bold",bg='#F21368',width=10,height=3)
+travel_b4.place(x=1000,y=450,anchor='center')
+
+
+
+
+
+
 mainloop()
