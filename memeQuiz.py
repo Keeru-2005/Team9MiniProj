@@ -5,7 +5,8 @@ import random
 from data import travel_q
 from data import travel_a
 root=Tk()
-root.geometry('700x600')
+root.state('zoomed')
+root.configure(background= "#F49393")
 n=1
 score=0
 index=1
@@ -18,17 +19,16 @@ def sel(chb,ans):
     
 def T():
     rootm=Toplevel()
-    rootm.geometry('800x500')
+    rootm.geometry('800x600')
     rootm.withdraw()
     rootm.deiconify()
     def qa(n):
-        rootm.withdraw()
-        rootm.deiconify()
+        rootm.state('zoomed')
         if n in travel_q:
             label=Label(rootm,text='Your question:',padx=100)
             label.grid(row=4,column=2)
-            labelQ=Label(rootm,text=travel_q[n],width=100,wraplength=600)
-            labelQ.grid(row=6,column=2,sticky='W')
+            labelQ=Label(rootm,text=travel_q[n],width=200,wraplength=600)
+            labelQ.grid(row=6,column=2)
             ch=IntVar()
             
             chb1=Radiobutton(rootm,variable=ch,value=1,text=travel_a[n][1],command=lambda: sel(chb1,travel_a),padx=105)
@@ -47,5 +47,7 @@ def T():
             sclabel.grid(row=23,column=2)
     qa(n)
 travel_b=Button(root,text='Travel',command=T)
-travel_b.grid(row=6,column=6)
+#travel_b=("Bell Gothic Std Black",20,"bold")
+#travel_b.configure(font=travel_b)
+travel_b.place(x=700,y=200)
 mainloop()
