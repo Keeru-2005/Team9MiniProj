@@ -19,11 +19,12 @@ def sel(chb,ans):
     
 def T():
     rootm=Toplevel()
-    rootm.geometry('800x600')
+    rootm.geometry('800x500')
     rootm.withdraw()
     rootm.deiconify()
     def qa(n):
-        rootm.state('zoomed')
+        rootm.withdraw()
+        rootm.deiconify()
         if n in travel_q:
             label=Label(rootm,text='Your question:',padx=100)
             label.grid(row=4,column=2)
