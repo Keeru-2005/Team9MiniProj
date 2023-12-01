@@ -6,7 +6,9 @@ from data import *
 from PIL import Image, ImageTk
 root=Tk()
 root.state('zoomed')
-root.configure(background= "#F49393")
+#root.configure(background= "#F0ECE5")
+
+l=Label(text='Welcome to Meme Quizz!!',font=("Ravie",30,'bold'),foreground="#5B0888").pack(pady=20)
 n=1
 score=0
 index=1
@@ -49,7 +51,9 @@ def T():
             sclabel=Label(rootm,text="your score :"+str(score))
             sclabel.grid(row=23,column=2)
     qa(n)
-travel_b=Button(root,text='TRAVEL',command=T,font="Times 15 bold",bg='#F21368',width=10,height=3)
+
+
+travel_b=Button(root,text='TRAVEL',command=T,font="TImes 15 bold",bg='#F21368',width=10,height=3)
 #travel_b=("Bell Gothic Std Black",20,"bold")
 #travel_b.configure(font=travel_b)
 travel_b.place(x=300,y=250,anchor='center')
@@ -66,7 +70,8 @@ travel_b2.place(x=300,y=450,anchor='center')
 travel_b3=Button(root,text='MOVIES',font="Times 15 bold",bg='#F21368',width=10,height=3)
 travel_b3.place(x=650,y=450,anchor='center')
 
-travel_b4=Button(root,text='ANIMALS',font="Times 15 bold",bg='#F21368',width=10,height=3)
+round=PhotoImage(file='button_animals.png')
+travel_b4=Button(root,image=round,border=0)
 travel_b4.place(x=1000,y=450,anchor='center')
 
 
