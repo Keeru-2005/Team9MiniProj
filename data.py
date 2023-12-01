@@ -120,30 +120,28 @@ sports_a={1:('Brendon McCullum','Chris Gayle','Brendon McCullum','Virat Kohli','
           9: ('Shooting','Shooting','Archery ','Boxing','Weightlifting'), 
           10:('Anil Kumble ','Kapil Dev ','Anil Kumble ','Harbhajan Singh ','Ravichandran Ashwin')}
 
-#MATHS
+#ANIMALS
 
-math_q={1:"",
-        2:"",
-        3:"",
-        4:"",
-        5:"",
-        6:"",
-        7:"",
-        8:"",
-        9:"",
-        10:""}
-
-
-
-math_a={1:(),
-        2:(),
-        3:(),
-        4:(),
-        5:(),
-        6:(),
-        7:(),
-        8:(),
-        9:(),
-        10:()}
+animals_q={1:"What is the largest mammal on Earth?",
+        2:"What is the primary diet of pandas?",
+        3:"Which animal is a symbol of good luck in many cultures?",
+        4:"What is the only flying mammal?",
+        5:"What is the largest big cat species in the world?",
+        6:"Which bird is known for its long migration journey, often spanning thousands of miles?",
+        7:"What is the largest species of bear?",
+        8:"What is the primary diet of a penguin?",
+        9:"Which of the following is a venomous snake?",
+        10:"Which sea creature is known for its ability to regenerate lost body parts, including arms?"}
 
 
+
+animals_a={1:("Blue Whale","Elephant","Blue Whale","Giraffe","Polar Bear"),
+        2:("Bamboo","Meat","Bamboo","Fish","Fruits"),
+        3:("Elephant","Black Cat","Bat","Rabbit","Elephant"),
+        4:("Bat","Bat","Flying Squirrel","Pegasus","Eagle"),
+        5:("Tiger","Lion","Leopard","Tiger","Cheetah"),
+        6:("Albatross","Hummingbird","Albatross","Pigeon","Sparrow"),
+        7:("Polar Bear","Black Bear","Polar Bear","Grizzly Bear","Panda Bear"),
+        8:("Fish","Fish","Bamboo","Insects","Grass"),
+        9:("King Cobra","Boa Constrictor","Anaconda","King Cobra","Python"),
+        10:("Starfish","Shark","Octopus","Starfish","Jellyfish")}
