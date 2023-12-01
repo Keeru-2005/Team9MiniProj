@@ -12,23 +12,34 @@ l=Label(text='Welcome to Meme Quizz!!',font=("Ravie",30,'bold'),foreground="#5B0
 n=1
 score=0
 index=1
+def crt_wrg_meme(rootm,filename):
+    crtmeme=Image.open(filename)
+    crtmeme=crtmeme.resize((150,150))
+    p=ImageTk.PhotoImage(crtmeme)
+    crtlabel=Label(rootm,image=p)
+    crtlabel.image=p
+    crtlabel.grid(row=25,column=2)
 def sel(chb,ans,rootm):
     global index,score
     if index in ans:
         if chb['text']==ans[index][0]:
             score+=10
-            crtmeme=Image.open('./images/image_01.png')
-            crtmeme=crtmeme.resize((150,150))
-            p=ImageTk.PhotoImage(crtmeme)
-            crtlabel=Label(rootm,image=p,text='Correct answer')
-            crtlabel.image=p
-            crtlabel.grid(row=25,column=2)
+            disableButtons('disabled',chb)
+            crt_wrg_meme(rootm,'./images/image_01.png')
+        else:
+            disableButtons('disabled',chb)
+            crt_wrg_meme(rootm,'./images/image_02.png')
     index+=1
-    
+def disableButtons(state,chb):
+    chb['state']=state
+def clear(root):
+    for child in root.winfo_children():
+        child.destroy()
 def T():
     rootm=Toplevel()
     rootm.state('zoomed')
     def qa(n):
+        clear(rootm)
         if n in travel_q:
             label=Label(rootm,text='Your question:',padx=100)
             label.grid(row=4,column=2)
