@@ -41,32 +41,31 @@ def T():
     def qa(n):
         clear(rootm)
         if n in travel_q:
-            label=Label(rootm,text='Your question:',padx=100)
+            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
             label.grid(row=4,column=2)
-            labelQ=Label(rootm,text=travel_q[n],width=200,wraplength=600)
+            labelQ=Label(rootm,text=travel_q[n],font=("Pristina",25,'bold'))
             labelQ.grid(row=6,column=2)
             ch=IntVar()
             
-            chb1=Radiobutton(rootm,variable=ch,value=1,text=travel_a[n][1],command=lambda: sel(chb1,travel_a,rootm),padx=105)
+            chb1=Radiobutton(rootm,variable=ch,value=1,text=travel_a[n][1],command=lambda: sel(chb1,travel_a,rootm),padx=105,font=("Cascadia Code",15))
             chb1.grid(row=10,column=2)
-            chb2=Radiobutton(rootm,variable=ch,value=2,text=travel_a[n][2],command=lambda: sel(chb2,travel_a,rootm),padx=105)
+            chb2=Radiobutton(rootm,variable=ch,value=2,text=travel_a[n][2],command=lambda: sel(chb2,travel_a,rootm),padx=105,font=("Cascadia Code",15))
             chb2.grid(row=11,column=2)
-            chb3=Radiobutton(rootm,variable=ch,value=3,text=travel_a[n][3],command=lambda: sel(chb3,travel_a,rootm),padx=105)
+            chb3=Radiobutton(rootm,variable=ch,value=3,text=travel_a[n][3],command=lambda: sel(chb3,travel_a,rootm),padx=105,font=("Cascadia Code",15))
             chb3.grid(row=12,column=2)
-            chb4=Radiobutton(rootm,variable=ch,value=4,text=travel_a[n][4],command=lambda: sel(chb4,travel_a,rootm),padx=105)
+            chb4=Radiobutton(rootm,variable=ch,value=4,text=travel_a[n][4],command=lambda: sel(chb4,travel_a,rootm),padx=105,font=("Cascadia Code",15))
             chb4.grid(row=13,column=2)
-            
-            nextB=Button(rootm,text="Next",command=lambda:qa(n+1))
+
+        
+            nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
             nextB.grid(row=20,column=2)
         else:
-            sclabel=Label(rootm,text="your score :"+str(score))
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score),font="Georgia 20 ",padx=550,pady= 20)
             sclabel.grid(row=23,column=2)
     qa(n)
 
 
 travel_b=Button(root,text='TRAVEL',command=T,font="TImes 15 bold",bg='#F21368',width=10,height=3)
-#travel_b=("Bell Gothic Std Black",20,"bold")
-#travel_b.configure(font=travel_b)
 travel_b.place(x=300,y=250,anchor='center')
 
 travel_b1=Button(root,text='BOOKS',font="Times 15 bold",bg='#F21368',width=10,height=3)
