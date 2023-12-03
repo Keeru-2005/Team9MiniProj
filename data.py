@@ -89,7 +89,7 @@ python_a={1:('/* Comment */','// Comment','/* Comment */','# Comment','-- Commen
           2:('17','17','20','27','0'),
           3:("Returns the length of a list or string","Returns the length of a list or string","Computes the logarithm in base 10","Returns the largest item in an iterable","Converts a value to lowercase"),
           4:("key in dictionary","key in dictionary","dictionary.contains(key)","dictionary[key] != None","contains(dictionary, key)"),
-          5:("Tuples are immutable, and lists are mutable","Tuples are mutable, and lists are immutable","Tuples are ordered, and lists are unordered","Tuples can contain elements of different data types, while lists cannot","Tuples use square brackets, and lists use parentheses"),
+          5:("Tuples are immutable and lists are mutable","Tuples are ordered, and lists are unordered","Tuples can contain elements of different data types, while lists cannot","Tuples use square brackets, and lists use parentheses"),
           6:("To combine two or more iterables element-wise","To compress a file","To create a zip file","To combine two or more iterables element-wise","To unzip a file"),
           7:("file = open('example.txt', 'rb')","file = open('example.txt', 'r')","file = open('example.txt', 'w')","file = open('example.txt', 'a')","file = open('example.txt', 'rb')"),
           8:('81','12','81','90','16'),
@@ -149,3 +149,7 @@ animals_a={1:("Blue Whale","Elephant","Blue Whale","Giraffe","Polar Bear"),
 #FINAL SCORE MEMES FILE PATHS
 travel_f=['./images/travel/t1.png','./images/travel/t2.png','./images/travel/t3.png','./images/travel/t4.png','./images/travel/t5.png','./images/travel/t6.png','./images/travel/t7.png','./images/travel/t8.png','./images/travel/t9.png','./images/travel/t10.png']
 python_f=['./images/python/p1.png','./images/python/p2.png','./images/python/p3.png','./images/python/p4.png','./images/python/p5.png','./images/python/p6.png','./images/python/p7.png','./images/python/p8.png','./images/python/p9.png','./images/python/p10.png']
+movie_f=['./images/movies/m1.png','./images/movies/m2.png','./images/movies/m3.png','./images/movies/m4.png','./images/movies/m5.png','./images/movies/m6.png','./images/movies/m7.png','./images/movies/m8.png','./images/movies/m9.png','./images/movies/m10.png']
+animals_f=['./images/animals/a1.png','./images/animals/a2.png','./images/animals/a3.png','./images/animals/a4.png','./images/animals/a5.png','./images/animals/a6.png','./images/animals/a7.png','./images/animals/a8.png','./images/animals/a9.png','./images/animals/a10.png']
+books_f=['./images/books/b1.png','./images/books/b2.png','./images/books/b3.png','./images/books/b4.png','./images/books/b5.png','./images/books/b6.png','./images/books/b7.png','./images/books/b8.png','./images/books/b9.png','./images/books/b10.png']
+sports_f=['./images/sports/s1.png','./images/sports/s2.png','./images/sports/s3.png','./images/sports/s4.png','./images/sports/s5.png','./images/sports/s6.png','./images/sports/s7.png','./images/sports/s8.png','./images/sports/s9.png','./images/sports/s10.png']
