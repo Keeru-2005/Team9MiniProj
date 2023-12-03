@@ -105,7 +105,7 @@ def P():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
-        if n in travel_q:
+        if n in python_q:
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
             label.grid(row=4,column=2)
             labelQ=Label(rootm,text=python_q[n],font=("Pristina",25,'bold'))
@@ -128,6 +128,40 @@ def P():
             sclabel=Label(rootm,text=" YOUR SCORE : "+str(score),font="Georgia 20 ",padx=550,pady= 20)
             sclabel.grid(row=23,column=2)
             final_score_meme(rootm,score,python_f)
+    qa(n)
+def A():
+    rootm=Toplevel()
+    rootm.state('zoomed')
+    bgq=Image.open('./images/quiz_pic.png')
+    bgq=bgq.resize((100,90))
+    bgq_root=ImageTk.PhotoImage(bgq)
+    bgq_label=Label(rootm, image=bgq_root)
+    bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
+    def qa(n):
+        clear(rootm)
+        if n in animals_q:
+            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
+            label.grid(row=4,column=2)
+            labelQ=Label(rootm,text=animals_q[n],font=("Pristina",25,'bold'))
+            labelQ.grid(row=6,column=2)
+            ch=IntVar()
+            
+            chb1=Radiobutton(rootm,variable=ch,value=1,text=animals_a[n][1],command=lambda: sel(chb1,animals_a,rootm,'./images/acrt.png','./images/awrg.png'),padx=105,font=("Cascadia Code",15))
+            chb1.grid(row=10,column=2)
+            chb2=Radiobutton(rootm,variable=ch,value=2,text=animals_a[n][2],command=lambda: sel(chb2,animals_a,rootm,'./images/acrt.png','./images/awrg.png'),padx=105,font=("Cascadia Code",15))
+            chb2.grid(row=11,column=2)
+            chb3=Radiobutton(rootm,variable=ch,value=3,text=animals_a[n][3],command=lambda: sel(chb3,animals_a,rootm,'./images/acrt.png','./images/awrg.png'),padx=105,font=("Cascadia Code",15))
+            chb3.grid(row=12,column=2)
+            chb4=Radiobutton(rootm,variable=ch,value=4,text=animals_a[n][4],command=lambda: sel(chb4,animals_a,rootm,'./images/acrt.png','./images/awrg.png'),padx=105,font=("Cascadia Code",15))
+            chb4.grid(row=13,column=2)
+
+        
+            nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
+            nextB.grid(row=20,column=2)
+        else:
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score),font="Georgia 20 ",padx=550,pady= 20)
+            sclabel.grid(row=23,column=2)
+            final_score_meme(rootm,score,animals_f)
     qa(n)
 
 def B():
@@ -222,7 +256,7 @@ movies_b=Button(root,image=r5,border=0,bg='midnight blue',command=M)
 movies_b.place(x=800,y=600,anchor='center')
 
 r6=PhotoImage(file='button_animals.png')
-animals_b4=Button(root,image=r6,border=0,bg='midnight blue')
+animals_b4=Button(root,image=r6,border=0,bg='midnight blue',command=A)
 animals_b4.place(x=1100,y=600,anchor='center')
 
 
