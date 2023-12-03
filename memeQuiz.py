@@ -44,11 +44,28 @@ def disableButtons(state,chb):
 def clear(root):
     for child in root.winfo_children():
         child.destroy()
+def openimg(rootm,f):
+    img=Image.open(f)
+    img=img.resize((450,450))
+    photo=ImageTk.PhotoImage(img)
+    photo_label=Label(rootm,image=photo)
+    photo_label.image=photo
+    photo_label.grid(row=3,column=2)
+lst=[10,20,30,40,50,60,70,80,90,100]
+
+def final_score_meme(rootm,score,final):
+    for i in lst:
+        if score==i:
+            openimg(rootm,final[lst.index(i)])
+            break
+    
+
+
 def T():
     rootm=Toplevel()
     rootm.state('zoomed')
     bgq=Image.open('./images/quiz_pic.png')
-    bgq=bgq.resize((1700,900))
+    bgq=bgq.resize((100,90))
     bgq_root=ImageTk.PhotoImage(bgq)
     bgq_label=Label(rootm, image=bgq_root)
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
@@ -76,6 +93,7 @@ def T():
         else:
             sclabel=Label(rootm,text=" YOUR SCORE : "+str(score),font="Georgia 20 ",padx=550,pady= 20)
             sclabel.grid(row=23,column=2)
+            final_score_meme(rootm,score,travel_f)
     qa(n)
 
 r1=PhotoImage(file='button_travel.png')

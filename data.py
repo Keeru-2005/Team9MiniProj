@@ -145,3 +145,5 @@ animals_a={1:("Blue Whale","Elephant","Blue Whale","Giraffe","Polar Bear"),
         8:("Fish","Fish","Bamboo","Insects","Grass"),
         9:("King Cobra","Boa Constrictor","Anaconda","King Cobra","Python"),
         10:("Starfish","Shark","Octopus","Starfish","Jellyfish")}
+#FINAL SCORE MEMES FILE PATHS
+travel_f=['./images/travel/t1.png','./images/travel/t2.png','./images/travel/t3.png','./images/travel/t4.png','./images/travel/t5.png','./images/travel/t6.png','./images/travel/t7.png','./images/travel/t8.png','./images/travel/t9.png','./images/travel/t10.png',]
