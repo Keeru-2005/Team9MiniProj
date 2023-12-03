@@ -8,7 +8,7 @@ root=Tk()
 root.state('zoomed')
 #root.configure(background= "#F0ECE5")
 
-l=Label(text='Welcome to Meme Quizz!!',font=("Ravie",30,'bold'),foreground="#5B0888").pack(pady=20)
+l=Label(text='WELCOME TO MEME QUIZZ!!',font=("Ravie",30,'bold'),foreground="#5B0888").pack(pady=20)
 n=1
 score=0
 index=1
@@ -64,24 +64,28 @@ def T():
             sclabel.grid(row=23,column=2)
     qa(n)
 
-
-travel_b=Button(root,text='TRAVEL',command=T,font="TImes 15 bold",bg='#F21368',width=10,height=3)
+r1=PhotoImage(file='button_travel.png')
+travel_b=Button(root,image=r1,border=0,command=T)
 travel_b.place(x=300,y=250,anchor='center')
 
-travel_b1=Button(root,text='BOOKS',font="Times 15 bold",bg='#F21368',width=10,height=3)
-travel_b1.place(x=650,y=250,anchor='center')
+r2=PhotoImage(file='button_books.png')
+books_b1=Button(root,image=r2,border=0)
+books_b1.place(x=650,y=250,anchor='center')
 
-travel_b5=Button(root,text='SPORTS',font="Times 15 bold",bg='#F21368',width=10,height=3)
-travel_b5.place(x=1000,y=250,anchor='center')
+r3=PhotoImage(file='button_sports.png')
+sports_b=Button(root,image=r3,border=0)
+sports_b.place(x=1000,y=250,anchor='center')
 
-travel_b2=Button(root,text='PYTHON',font="Times 15 bold",bg='#F21368',width=10,height=3)
-travel_b2.place(x=300,y=450,anchor='center')
+r4=PhotoImage(file='button_python.png')
+python_b=Button(root,image=r4,border=0)
+python_b.place(x=300,y=450,anchor='center')
 
-travel_b3=Button(root,text='MOVIES',font="Times 15 bold",bg='#F21368',width=10,height=3)
-travel_b3.place(x=650,y=450,anchor='center')
+r5=PhotoImage(file='button_movies.png')
+movies_b=Button(root,image=r5,border=0)
+movies_b.place(x=650,y=450,anchor='center')
 
-round=PhotoImage(file='button_animals.png')
-travel_b4=Button(root,image=round,border=0)
+r6=PhotoImage(file='button_animals.png')
+travel_b4=Button(root,image=r6,border=0)
 travel_b4.place(x=1000,y=450,anchor='center')
 
 
