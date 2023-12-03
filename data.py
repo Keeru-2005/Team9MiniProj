@@ -146,4 +146,5 @@ animals_a={1:("Blue Whale","Elephant","Blue Whale","Giraffe","Polar Bear"),
         9:("King Cobra","Boa Constrictor","Anaconda","King Cobra","Python"),
         10:("Starfish","Shark","Octopus","Starfish","Jellyfish")}
 #FINAL SCORE MEMES FILE PATHS
-travel_f=['./images/travel/t1.png','./images/travel/t2.png','./images/travel/t3.png','./images/travel/t4.png','./images/travel/t5.png','./images/travel/t6.png','./images/travel/t7.png','./images/travel/t8.png','./images/travel/t9.png','./images/travel/t10.png',]
+travel_f=['./images/travel/t1.png','./images/travel/t2.png','./images/travel/t3.png','./images/travel/t4.png','./images/travel/t5.png','./images/travel/t6.png','./images/travel/t7.png','./images/travel/t8.png','./images/travel/t9.png','./images/travel/t10.png']
+python_f=['./images/python/p1.png','./images/python/p2.png','./images/python/p3.png','./images/python/p4.png','./images/python/p5.png','./images/python/p6.png','./images/python/p7.png','./images/python/p8.png','./images/python/p9.png','./images/python/p10.png']
