@@ -18,7 +18,7 @@ l=Label(text='WELCOME TO MEME QUIZ!!',font=("gabriola",40,'bold'),foreground="wh
 ltest=Label(text="CHOOSE A CATEGORY",font=("gabriola",40,"bold"),foreground="light blue",bg="purple")
 l.place(x=550,y=50)
 ltest.place(x=600,y=200)
-n=1     #ALGERIAN lucida calligraphy harrington gabriola
+n=1     
 score=0 
 index=1
 def crt_wrg_meme(rootm,filename):
@@ -112,13 +112,13 @@ def P():
             labelQ.grid(row=6,column=2)
             ch=IntVar()
             
-            chb1=Radiobutton(rootm,variable=ch,value=1,text=python_a[n][1],command=lambda: sel(chb1,python_a,rootm,'./images/tcrt.png','./images/Screenshot (21).png'),padx=105,font=("Cascadia Code",15))
+            chb1=Radiobutton(rootm,variable=ch,value=1,text=python_a[n][1],command=lambda: sel(chb1,python_a,rootm,'./images/pcrt.png','./images/pwrg.png'),padx=105,font=("Cascadia Code",15))
             chb1.grid(row=10,column=2)
-            chb2=Radiobutton(rootm,variable=ch,value=2,text=python_a[n][2],command=lambda: sel(chb2,python_a,rootm,'./images/tcrt.png','./images/Screenshot (21).png'),padx=105,font=("Cascadia Code",15))
+            chb2=Radiobutton(rootm,variable=ch,value=2,text=python_a[n][2],command=lambda: sel(chb2,python_a,rootm,'./images/pcrt.png','./images/pwrg.png'),padx=105,font=("Cascadia Code",15))
             chb2.grid(row=11,column=2)
-            chb3=Radiobutton(rootm,variable=ch,value=3,text=python_a[n][3],command=lambda: sel(chb3,python_a,rootm,'./images/tcrt.png','./images/Screenshot (21).png'),padx=105,font=("Cascadia Code",15))
+            chb3=Radiobutton(rootm,variable=ch,value=3,text=python_a[n][3],command=lambda: sel(chb3,python_a,rootm,'./images/pcrt.png','./images/pwrg.png'),padx=105,font=("Cascadia Code",15))
             chb3.grid(row=12,column=2)
-            chb4=Radiobutton(rootm,variable=ch,value=4,text=python_a[n][4],command=lambda: sel(chb4,python_a,rootm,'./images/tcrt.png','./images/Screenshot (21).png'),padx=105,font=("Cascadia Code",15))
+            chb4=Radiobutton(rootm,variable=ch,value=4,text=python_a[n][4],command=lambda: sel(chb4,python_a,rootm,'./images/pcrt.png','./images/pwrg.png'),padx=105,font=("Cascadia Code",15))
             chb4.grid(row=13,column=2)
 
         
@@ -130,12 +130,83 @@ def P():
             final_score_meme(rootm,score,python_f)
     qa(n)
 
+def B():
+    rootm=Toplevel()
+    rootm.state('zoomed')
+    bgq=Image.open('./images/quiz_pic.png')
+    bgq=bgq.resize((100,90))
+    bgq_root=ImageTk.PhotoImage(bgq)
+    bgq_label=Label(rootm, image=bgq_root)
+    bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
+    def qa(n):
+        clear(rootm)
+        if n in travel_q:
+            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
+            label.grid(row=4,column=2)
+            labelQ=Label(rootm,text=books_q[n],font=("Pristina",25,'bold'))
+            labelQ.grid(row=6,column=2)
+            ch=IntVar()
+            
+            chb1=Radiobutton(rootm,variable=ch,value=1,text=books_a[n][1],command=lambda: sel(chb1,books_a,rootm,'./images/bcrt.png','./images/bwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb1.grid(row=10,column=2)
+            chb2=Radiobutton(rootm,variable=ch,value=2,text=books_a[n][2],command=lambda: sel(chb2,books_a,rootm,'./images/bcrt.png','./images/bwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb2.grid(row=11,column=2)
+            chb3=Radiobutton(rootm,variable=ch,value=3,text=books_a[n][3],command=lambda: sel(chb3,books_a,rootm,'./images/bcrt.png','./images/bwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb3.grid(row=12,column=2)
+            chb4=Radiobutton(rootm,variable=ch,value=4,text=books_a[n][4],command=lambda: sel(chb4,books_a,rootm,'./images/bcrt.png','./images/bwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb4.grid(row=13,column=2)
+
+        
+            nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
+            nextB.grid(row=20,column=2)
+        else:
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score),font="Georgia 20 ",padx=550,pady= 20)
+            sclabel.grid(row=23,column=2)
+            final_score_meme(rootm,score,books_f)
+    qa(n)
+
+def M():
+    rootm=Toplevel()
+    rootm.state('zoomed')
+    bgq=Image.open('./images/quiz_pic.png')
+    bgq=bgq.resize((100,90))
+    bgq_root=ImageTk.PhotoImage(bgq)
+    bgq_label=Label(rootm, image=bgq_root)
+    bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
+    def qa(n):
+        clear(rootm)
+        if n in travel_q:
+            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
+            label.grid(row=4,column=2)
+            labelQ=Label(rootm,text=movie_q[n],font=("Pristina",25,'bold'))
+            labelQ.grid(row=6,column=2)
+            ch=IntVar()
+            
+            chb1=Radiobutton(rootm,variable=ch,value=1,text=movie_a[n][1],command=lambda: sel(chb1,movie_a,rootm,'./images/mcrt.png','./images/mwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb1.grid(row=10,column=2)
+            chb2=Radiobutton(rootm,variable=ch,value=2,text=movie_a[n][2],command=lambda: sel(chb2,movie_a,rootm,'./images/mcrt.png','./images/mwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb2.grid(row=11,column=2)
+            chb3=Radiobutton(rootm,variable=ch,value=3,text=movie_a[n][3],command=lambda: sel(chb3,movie_a,rootm,'./images/mcrt.png','./images/mwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb3.grid(row=12,column=2)
+            chb4=Radiobutton(rootm,variable=ch,value=4,text=movie_a[n][4],command=lambda: sel(chb4,movie_a,rootm,'./images/mcrt.png','./images/mwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb4.grid(row=13,column=2)
+
+        
+            nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
+            nextB.grid(row=20,column=2)
+        else:
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score),font="Georgia 20 ",padx=550,pady= 20)
+            sclabel.grid(row=23,column=2)
+            final_score_meme(rootm,score,movie_f)
+    qa(n)
+
+
 r1=PhotoImage(file='button_travel.png')
 travel_b=Button(root,image=r1,border=0,bg='midnight blue',command=T)
 travel_b.place(x=500,y=450,anchor='center')
 
 r2=PhotoImage(file='button_books.png')
-books_b1=Button(root,image=r2,border=0,bg='midnight blue')
+books_b1=Button(root,image=r2,border=0,bg='midnight blue',command=B)
 books_b1.place(x=800,y=450,anchor='center')
 
 r3=PhotoImage(file='button_sports.png')
@@ -147,7 +218,7 @@ python_b=Button(root,image=r4,border=0,bg='midnight blue',command=P)
 python_b.place(x=500,y=600,anchor='center')
 
 r5=PhotoImage(file='button_movies.png')
-movies_b=Button(root,image=r5,border=0,bg='midnight blue')
+movies_b=Button(root,image=r5,border=0,bg='midnight blue',command=M)
 movies_b.place(x=800,y=600,anchor='center')
 
 r6=PhotoImage(file='button_animals.png')
