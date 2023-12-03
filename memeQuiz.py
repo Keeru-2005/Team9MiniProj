@@ -14,13 +14,16 @@ bg=bg.resize((1700,900))
 bg_root=ImageTk.PhotoImage(bg)
 rootlabel=Label(root, image=bg_root)
 rootlabel.place(x=0,y=0,relwidth=1,relheight=1)
-l=Label(text='WELCOME TO MEME QUIZZ!!',font=("Ravie",30,'bold'),foreground="white",bg='midnight blue').pack()
-n=1
-score=0
+l=Label(text='WELCOME TO MEME QUIZ!!',font=("gabriola",40,'bold'),foreground="white",bg='purple')
+ltest=Label(text="CHOOSE A CATEGORY",font=("gabriola",40,"bold"),foreground="light blue",bg="purple")
+l.place(x=550,y=50)
+ltest.place(x=600,y=200)
+n=1     #ALGERIAN lucida calligraphy harrington gabriola
+score=0 
 index=1
 def crt_wrg_meme(rootm,filename):
     crtmeme=Image.open(filename)
-    crtmeme=crtmeme.resize((150,150))
+    crtmeme=crtmeme.resize((400,400))
     p=ImageTk.PhotoImage(crtmeme)
     crtlabel=Label(rootm,image=p)
     crtlabel.image=p
