@@ -25,16 +25,16 @@ def crt_wrg_meme(rootm,filename):
     crtlabel=Label(rootm,image=p)
     crtlabel.image=p
     crtlabel.grid(row=25,column=2)
-def sel(chb,ans,rootm):
+def sel(chb,ans,rootm,crt,wrg):
     global index,score
     if index in ans:
         if chb['text']==ans[index][0]:
             score+=10
             disableButtons('disabled',chb)
-            crt_wrg_meme(rootm,'./images/image_01.png')
+            crt_wrg_meme(rootm,crt)
         else:
             disableButtons('disabled',chb)
-            crt_wrg_meme(rootm,'./images/image_02.png')
+            crt_wrg_meme(rootm,wrg)
     index+=1
 def disableButtons(state,chb):
     chb['state']=state
@@ -58,13 +58,13 @@ def T():
             labelQ.grid(row=6,column=2)
             ch=IntVar()
             
-            chb1=Radiobutton(rootm,variable=ch,value=1,text=travel_a[n][1],command=lambda: sel(chb1,travel_a,rootm),padx=105,font=("Cascadia Code",15))
+            chb1=Radiobutton(rootm,variable=ch,value=1,text=travel_a[n][1],command=lambda: sel(chb1,travel_a,rootm,'crtfilepath','wrgfilepath'),padx=105,font=("Cascadia Code",15))
             chb1.grid(row=10,column=2)
-            chb2=Radiobutton(rootm,variable=ch,value=2,text=travel_a[n][2],command=lambda: sel(chb2,travel_a,rootm),padx=105,font=("Cascadia Code",15))
+            chb2=Radiobutton(rootm,variable=ch,value=2,text=travel_a[n][2],command=lambda: sel(chb2,travel_a,rootm,'crtfilepath','wrgfilepath'),padx=105,font=("Cascadia Code",15))
             chb2.grid(row=11,column=2)
-            chb3=Radiobutton(rootm,variable=ch,value=3,text=travel_a[n][3],command=lambda: sel(chb3,travel_a,rootm),padx=105,font=("Cascadia Code",15))
+            chb3=Radiobutton(rootm,variable=ch,value=3,text=travel_a[n][3],command=lambda: sel(chb3,travel_a,rootm,'crtfilepath','wrgfilepath'),padx=105,font=("Cascadia Code",15))
             chb3.grid(row=12,column=2)
-            chb4=Radiobutton(rootm,variable=ch,value=4,text=travel_a[n][4],command=lambda: sel(chb4,travel_a,rootm),padx=105,font=("Cascadia Code",15))
+            chb4=Radiobutton(rootm,variable=ch,value=4,text=travel_a[n][4],command=lambda: sel(chb4,travel_a,rootm,'crtfilepath','wrgfilepath'),padx=105,font=("Cascadia Code",15))
             chb4.grid(row=13,column=2)
 
         
