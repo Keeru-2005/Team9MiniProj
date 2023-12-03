@@ -8,7 +8,13 @@ root=Tk()
 root.state('zoomed')
 #root.configure(background= "#F0ECE5")
 
-l=Label(text='WELCOME TO MEME QUIZZ!!',font=("Ravie",30,'bold'),foreground="#5B0888").pack(pady=20)
+
+bg=Image.open('./images/bg5.png')
+bg=bg.resize((1700,900))
+bg_root=ImageTk.PhotoImage(bg)
+rootlabel=Label(root, image=bg_root)
+rootlabel.place(x=0,y=0,relwidth=1,relheight=1)
+l=Label(text='WELCOME TO MEME QUIZZ!!',font=("Ravie",30,'bold'),foreground="white",bg='midnight blue').pack()
 n=1
 score=0
 index=1
@@ -38,6 +44,11 @@ def clear(root):
 def T():
     rootm=Toplevel()
     rootm.state('zoomed')
+    bgq=Image.open('./images/quiz_pic.png')
+    bgq=bgq.resize((1700,900))
+    bgq_root=ImageTk.PhotoImage(bgq)
+    bgq_label=Label(rootm, image=bgq_root)
+    bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
         if n in travel_q:
@@ -65,28 +76,28 @@ def T():
     qa(n)
 
 r1=PhotoImage(file='button_travel.png')
-travel_b=Button(root,image=r1,border=0,command=T)
-travel_b.place(x=300,y=250,anchor='center')
+travel_b=Button(root,image=r1,border=0,bg='midnight blue',command=T)
+travel_b.place(x=500,y=450,anchor='center')
 
 r2=PhotoImage(file='button_books.png')
-books_b1=Button(root,image=r2,border=0)
-books_b1.place(x=650,y=250,anchor='center')
+books_b1=Button(root,image=r2,border=0,bg='midnight blue')
+books_b1.place(x=800,y=450,anchor='center')
 
 r3=PhotoImage(file='button_sports.png')
-sports_b=Button(root,image=r3,border=0)
-sports_b.place(x=1000,y=250,anchor='center')
+sports_b=Button(root,image=r3,border=0,bg='midnight blue')
+sports_b.place(x=1100,y=450,anchor='center')
 
 r4=PhotoImage(file='button_python.png')
-python_b=Button(root,image=r4,border=0)
-python_b.place(x=300,y=450,anchor='center')
+python_b=Button(root,image=r4,border=0,bg='midnight blue')
+python_b.place(x=500,y=600,anchor='center')
 
 r5=PhotoImage(file='button_movies.png')
-movies_b=Button(root,image=r5,border=0)
-movies_b.place(x=650,y=450,anchor='center')
+movies_b=Button(root,image=r5,border=0,bg='midnight blue')
+movies_b.place(x=800,y=600,anchor='center')
 
 r6=PhotoImage(file='button_animals.png')
-travel_b4=Button(root,image=r6,border=0)
-travel_b4.place(x=1000,y=450,anchor='center')
+animals_b4=Button(root,image=r6,border=0,bg='midnight blue')
+animals_b4.place(x=1100,y=600,anchor='center')
 
 
 
