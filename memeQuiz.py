@@ -174,7 +174,7 @@ def B():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
-        if n in travel_q:
+        if n in books_q:
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
             label.grid(row=4,column=2)
             labelQ=Label(rootm,text=books_q[n],font=("Pristina",25,'bold'))
@@ -209,7 +209,7 @@ def M():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
-        if n in travel_q:
+        if n in movie_q:
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
             label.grid(row=4,column=2)
             labelQ=Label(rootm,text=movie_q[n],font=("Pristina",25,'bold'))
@@ -244,7 +244,7 @@ def S():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
-        if n in travel_q:
+        if n in sports_q:
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
             label.grid(row=4,column=2)
             labelQ=Label(rootm,text=sports_q[n],font=("Pristina",25,'bold'))
