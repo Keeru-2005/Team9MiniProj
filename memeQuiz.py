@@ -174,7 +174,7 @@ def B():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
-        if n in travel_q:
+        if n in books_q:
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
             label.grid(row=4,column=2)
             labelQ=Label(rootm,text=books_q[n],font=("Pristina",25,'bold'))
@@ -209,7 +209,7 @@ def M():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
-        if n in travel_q:
+        if n in movie_q:
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
             label.grid(row=4,column=2)
             labelQ=Label(rootm,text=movie_q[n],font=("Pristina",25,'bold'))
@@ -267,6 +267,43 @@ def S():
             sclabel.grid(row=23,column=2)
             final_score_meme(rootm,score,sports_f)
     qa(n)
+
+def S():
+    rootm=Toplevel()
+    rootm.state('zoomed')
+    bgq=Image.open('./images/quiz_pic.png')
+    bgq=bgq.resize((100,90))
+    bgq_root=ImageTk.PhotoImage(bgq)
+    bgq_label=Label(rootm, image=bgq_root)
+    bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
+    def qa(n):
+        clear(rootm)
+        if n in sports_q:
+            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
+            label.grid(row=4,column=2)
+            labelQ=Label(rootm,text=sports_q[n],font=("Pristina",25,'bold'))
+            labelQ.grid(row=6,column=2)
+            ch=IntVar()
+            
+            chb1=Radiobutton(rootm,variable=ch,value=1,text=sports_a[n][1],command=lambda: sel(chb1,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15))
+            chb1.grid(row=10,column=2)
+            chb2=Radiobutton(rootm,variable=ch,value=2,text=sports_a[n][2],command=lambda: sel(chb2,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15))
+            chb2.grid(row=11,column=2)
+            chb3=Radiobutton(rootm,variable=ch,value=3,text=sports_a[n][3],command=lambda: sel(chb3,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15))
+            chb3.grid(row=12,column=2)
+            chb4=Radiobutton(rootm,variable=ch,value=4,text=sports_a[n][4],command=lambda: sel(chb4,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15))
+            chb4.grid(row=13,column=2)
+
+        
+            nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
+            nextB.grid(row=20,column=2)
+        else:
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score),font="Georgia 20 ",padx=550,pady= 20)
+            sclabel.grid(row=23,column=2)
+            final_score_meme(rootm,score,sports_f)
+    qa(n)
+
+
 
 
 r1=PhotoImage(file='button_travel.png')
