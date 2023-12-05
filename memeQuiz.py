@@ -91,7 +91,7 @@ def T():
             nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
             nextB.grid(row=20,column=2)
         else:
-            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score),font="Georgia 20 ",padx=550,pady= 20)
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20)
             sclabel.grid(row=23,column=2)
             final_score_meme(rootm,score,travel_f)
     qa(n)
@@ -125,7 +125,7 @@ def P():
             nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
             nextB.grid(row=20,column=2)
         else:
-            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score),font="Georgia 20 ",padx=550,pady= 20)
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20)
             sclabel.grid(row=23,column=2)
             final_score_meme(rootm,score,python_f)
     qa(n)
@@ -159,7 +159,7 @@ def A():
             nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
             nextB.grid(row=20,column=2)
         else:
-            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score),font="Georgia 20 ",padx=550,pady= 20)
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20)
             sclabel.grid(row=23,column=2)
             final_score_meme(rootm,score,animals_f)
     qa(n)
@@ -194,7 +194,7 @@ def B():
             nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
             nextB.grid(row=20,column=2)
         else:
-            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score),font="Georgia 20 ",padx=550,pady= 20)
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20)
             sclabel.grid(row=23,column=2)
             final_score_meme(rootm,score,books_f)
     qa(n)
@@ -229,7 +229,7 @@ def M():
             nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
             nextB.grid(row=20,column=2)
         else:
-            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score),font="Georgia 20 ",padx=550,pady= 20)
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20)
             sclabel.grid(row=23,column=2)
             final_score_meme(rootm,score,movie_f)
     qa(n)
@@ -263,7 +263,7 @@ def S():
             nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
             nextB.grid(row=20,column=2)
         else:
-            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+"100",font="Georgia 20 ",padx=550,pady= 20)
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+"/100",font="Georgia 20 ",padx=550,pady= 20)
             sclabel.grid(row=23,column=2)
             final_score_meme(rootm,score,sports_f)
     qa(n)
@@ -292,10 +292,4 @@ movies_b.place(x=800,y=600,anchor='center')
 r6=PhotoImage(file='button_animals.png')
 animals_b4=Button(root,image=r6,border=0,bg='midnight blue',command=A)
 animals_b4.place(x=1100,y=600,anchor='center')
-
-
-
-
-
-
 mainloop()
