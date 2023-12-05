@@ -33,14 +33,17 @@ def sel(chb,ans,rootm,crt,wrg):
     if index in ans:
         if chb['text']==ans[index][0]:
             score+=10
-            disableButtons('disabled',chb)
+            disableButtons('disabled')
             crt_wrg_meme(rootm,crt)
         else:
-            disableButtons('disabled',chb)
+            disableButtons('disabled')
             crt_wrg_meme(rootm,wrg)
     index+=1
-def disableButtons(state,chb):
-    chb['state']=state
+def disableButtons(state):
+    chb1['state']=state
+    chb2['state']=state
+    chb3['state']=state
+    chb4['state']=state
 def clear(root):
     for child in root.winfo_children():
         child.destroy()
@@ -71,6 +74,7 @@ def T():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
+        global chb1,chb2,chb3,chb4
         if n in travel_q:
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
             label.grid(row=4,column=2)
@@ -105,6 +109,7 @@ def P():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
+        global chb1,chb2,chb3,chb4
         if n in python_q:
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
             label.grid(row=4,column=2)
@@ -139,6 +144,7 @@ def A():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
+        global chb1,chb2,chb3,chb4
         if n in animals_q:
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
             label.grid(row=4,column=2)
@@ -174,6 +180,7 @@ def B():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
+        global chb1,chb2,chb3,chb4
         if n in books_q:
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
             label.grid(row=4,column=2)
@@ -209,6 +216,7 @@ def M():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
+        global chb1,chb2,chb3,chb4
         if n in movie_q:
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
             label.grid(row=4,column=2)
@@ -243,6 +251,7 @@ def S():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
+        global chb1,chb2,chb3,chb4
         if n in sports_q:
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
             label.grid(row=4,column=2)
@@ -278,6 +287,7 @@ def S():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
+        global chb1,chb2,chb3,chb4
         if n in sports_q:
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
             label.grid(row=4,column=2)
