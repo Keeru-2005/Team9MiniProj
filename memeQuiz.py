@@ -298,7 +298,7 @@ def S():
             nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
             nextB.grid(row=20,column=2)
         else:
-            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score),font="Georgia 20 ",padx=550,pady= 20)
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20)
             sclabel.grid(row=23,column=2)
             final_score_meme(rootm,score,sports_f)
     qa(n)
