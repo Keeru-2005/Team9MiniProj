@@ -7,7 +7,7 @@ from PIL import Image, ImageTk
 root=Tk()
 root.state('zoomed')
 #root.configure(background= "#F0ECE5")
-
+#rgb(63,0,129)
 
 bg=Image.open('./images/bg5.png')
 bg=bg.resize((1700,900))
@@ -67,29 +67,33 @@ def final_score_meme(rootm,score,final):
 def T():
     rootm=Toplevel()
     rootm.state('zoomed')
-    bgq=Image.open('./images/quiz_pic.png')
-    bgq=bgq.resize((100,90))
-    bgq_root=ImageTk.PhotoImage(bgq)
-    bgq_label=Label(rootm, image=bgq_root)
-    bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
+    rootm.configure(bg='#230045')
+    
     def qa(n):
         clear(rootm)
+        bgq=Image.open('./images/quiz_pic.png')
+        bgq=bgq.resize((1450,900))
+        bgq_root=ImageTk.PhotoImage(bgq)
+
+        bgq_label=Label(rootm,image=bgq_root,bg='#230045')
+        bgq_label.image=bgq_root
+        bgq_label.place(x=0,y=0,relwidth=1)
         global chb1,chb2,chb3,chb4
         if n in travel_q:
-            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
-            label.grid(row=4,column=2)
-            labelQ=Label(rootm,text=travel_q[n],font=("Pristina",25,'bold'))
-            labelQ.grid(row=6,column=2)
+            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",24),fg='white',bg='#230045')
+            label.grid(row=6,column=2)
+            labelQ=Label(rootm,text=travel_q[n],font=("Cascadia Code",24,'bold'),fg='white',bg='#230045')
+            labelQ.grid(row=8,column=2)
             ch=IntVar()
             
-            chb1=Radiobutton(rootm,variable=ch,value=1,text=travel_a[n][1],command=lambda: sel(chb1,travel_a,rootm,'./images/tcrt.png','./images/twrg.png'),padx=105,font=("Cascadia Code",15))
-            chb1.grid(row=10,column=2)
-            chb2=Radiobutton(rootm,variable=ch,value=2,text=travel_a[n][2],command=lambda: sel(chb2,travel_a,rootm,'./images/tcrt.png','./images/twrg.png'),padx=105,font=("Cascadia Code",15))
-            chb2.grid(row=11,column=2)
-            chb3=Radiobutton(rootm,variable=ch,value=3,text=travel_a[n][3],command=lambda: sel(chb3,travel_a,rootm,'./images/tcrt.png','./images/twrg.png'),padx=105,font=("Cascadia Code",15))
-            chb3.grid(row=12,column=2)
-            chb4=Radiobutton(rootm,variable=ch,value=4,text=travel_a[n][4],command=lambda: sel(chb4,travel_a,rootm,'./images/tcrt.png','./images/twrg.png'),padx=105,font=("Cascadia Code",15))
-            chb4.grid(row=13,column=2)
+            chb1=Radiobutton(rootm,variable=ch,value=1,text=travel_a[n][1],command=lambda: sel(chb1,travel_a,rootm,'./images/tcrt.png','./images/twrg.png'),font=("Cascadia Code",22),fg='white',bg='#230045')
+            chb1.grid(row=12,column=2)
+            chb2=Radiobutton(rootm,variable=ch,value=2,text=travel_a[n][2],command=lambda: sel(chb2,travel_a,rootm,'./images/tcrt.png','./images/twrg.png'),font=("Cascadia Code",22),fg='white',bg='#230045')
+            chb2.grid(row=14,column=2)
+            chb3=Radiobutton(rootm,variable=ch,value=3,text=travel_a[n][3],command=lambda: sel(chb3,travel_a,rootm,'./images/tcrt.png','./images/twrg.png'),font=("Cascadia Code",22),fg='white',bg='#230045')
+            chb3.grid(row=16,column=2)
+            chb4=Radiobutton(rootm,variable=ch,value=4,text=travel_a[n][4],command=lambda: sel(chb4,travel_a,rootm,'./images/tcrt.png','./images/twrg.png'),font=("Cascadia Code",22),fg='white',bg='#230045')
+            chb4.grid(row=18,column=2)
 
         
             nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
@@ -102,28 +106,32 @@ def T():
 def P():
     rootm=Toplevel()
     rootm.state('zoomed')
-    bgq=Image.open('./images/quiz_pic.png')
-    bgq=bgq.resize((100,90))
-    bgq_root=ImageTk.PhotoImage(bgq)
-    bgq_label=Label(rootm, image=bgq_root)
-    bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
+    rootm.configure(bg='#230045')
+    
     def qa(n):
         clear(rootm)
+        bgq=Image.open('./images/quiz_pic.png')
+        bgq=bgq.resize((1450,900))
+        bgq_root=ImageTk.PhotoImage(bgq)
+
+        bgq_label=Label(rootm,image=bgq_root,bg='#230045')
+        bgq_label.image=bgq_root
+        bgq_label.place(x=0,y=0,relwidth=1)
         global chb1,chb2,chb3,chb4
         if n in python_q:
-            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
+            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",24),fg='white',bg='#230045')
             label.grid(row=4,column=2)
-            labelQ=Label(rootm,text=python_q[n],font=("Pristina",25,'bold'))
+            labelQ=Label(rootm,text=python_q[n],font=("Cascadia Code",24,'bold'),fg='white',bg='#230045')
             labelQ.grid(row=6,column=2)
             ch=IntVar()
             
-            chb1=Radiobutton(rootm,variable=ch,value=1,text=python_a[n][1],command=lambda: sel(chb1,python_a,rootm,'./images/pcrt.png','./images/pwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb1=Radiobutton(rootm,variable=ch,value=1,text=python_a[n][1],command=lambda: sel(chb1,python_a,rootm,'./images/pcrt.png','./images/pwrg.png'),font=("Cascadia Code",22),fg='white',bg='#230045')
             chb1.grid(row=10,column=2)
-            chb2=Radiobutton(rootm,variable=ch,value=2,text=python_a[n][2],command=lambda: sel(chb2,python_a,rootm,'./images/pcrt.png','./images/pwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb2=Radiobutton(rootm,variable=ch,value=2,text=python_a[n][2],command=lambda: sel(chb2,python_a,rootm,'./images/pcrt.png','./images/pwrg.png'),font=("Cascadia Code",22),fg='white',bg='#230045')
             chb2.grid(row=11,column=2)
-            chb3=Radiobutton(rootm,variable=ch,value=3,text=python_a[n][3],command=lambda: sel(chb3,python_a,rootm,'./images/pcrt.png','./images/pwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb3=Radiobutton(rootm,variable=ch,value=3,text=python_a[n][3],command=lambda: sel(chb3,python_a,rootm,'./images/pcrt.png','./images/pwrg.png'),font=("Cascadia Code",22),fg='white',bg='#230045')
             chb3.grid(row=12,column=2)
-            chb4=Radiobutton(rootm,variable=ch,value=4,text=python_a[n][4],command=lambda: sel(chb4,python_a,rootm,'./images/pcrt.png','./images/pwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb4=Radiobutton(rootm,variable=ch,value=4,text=python_a[n][4],command=lambda: sel(chb4,python_a,rootm,'./images/pcrt.png','./images/pwrg.png'),font=("Cascadia Code",22),fg='white',bg='#230045')
             chb4.grid(row=13,column=2)
 
         
