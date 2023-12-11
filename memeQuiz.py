@@ -152,21 +152,28 @@ def A():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
+        bgq=Image.open('./images/quiz_pic.png')
+        bgq=bgq.resize((1450,900))
+        bgq_root=ImageTk.PhotoImage(bgq)
+
+        bgq_label=Label(rootm,image=bgq_root,bg='#230045')
+        bgq_label.image=bgq_root
+        bgq_label.place(x=0,y=0,relwidth=1)
         global chb1,chb2,chb3,chb4
         if n in animals_q:
-            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
+            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
             label.grid(row=4,column=2)
-            labelQ=Label(rootm,text=animals_q[n],font=("Pristina",25,'bold'))
+            labelQ=Label(rootm,text=animals_q[n],font=("Pristina",25,'bold'),fg='white',bg='#230045')
             labelQ.grid(row=6,column=2)
             ch=IntVar()
             
-            chb1=Radiobutton(rootm,variable=ch,value=1,text=animals_a[n][1],command=lambda: sel(chb1,animals_a,rootm,'./images/acrt.png','./images/awrg.png'),padx=105,font=("Cascadia Code",15))
+            chb1=Radiobutton(rootm,variable=ch,value=1,text=animals_a[n][1],command=lambda: sel(chb1,animals_a,rootm,'./images/acrt.png','./images/awrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb1.grid(row=10,column=2)
-            chb2=Radiobutton(rootm,variable=ch,value=2,text=animals_a[n][2],command=lambda: sel(chb2,animals_a,rootm,'./images/acrt.png','./images/awrg.png'),padx=105,font=("Cascadia Code",15))
+            chb2=Radiobutton(rootm,variable=ch,value=2,text=animals_a[n][2],command=lambda: sel(chb2,animals_a,rootm,'./images/acrt.png','./images/awrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb2.grid(row=11,column=2)
-            chb3=Radiobutton(rootm,variable=ch,value=3,text=animals_a[n][3],command=lambda: sel(chb3,animals_a,rootm,'./images/acrt.png','./images/awrg.png'),padx=105,font=("Cascadia Code",15))
+            chb3=Radiobutton(rootm,variable=ch,value=3,text=animals_a[n][3],command=lambda: sel(chb3,animals_a,rootm,'./images/acrt.png','./images/awrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb3.grid(row=12,column=2)
-            chb4=Radiobutton(rootm,variable=ch,value=4,text=animals_a[n][4],command=lambda: sel(chb4,animals_a,rootm,'./images/acrt.png','./images/awrg.png'),padx=105,font=("Cascadia Code",15))
+            chb4=Radiobutton(rootm,variable=ch,value=4,text=animals_a[n][4],command=lambda: sel(chb4,animals_a,rootm,'./images/acrt.png','./images/awrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb4.grid(row=13,column=2)
 
         
@@ -188,21 +195,28 @@ def B():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
+        bgq=Image.open('./images/quiz_pic.png')
+        bgq=bgq.resize((1450,900))
+        bgq_root=ImageTk.PhotoImage(bgq)
+
+        bgq_label=Label(rootm,image=bgq_root,bg='#230045')
+        bgq_label.image=bgq_root
+        bgq_label.place(x=0,y=0,relwidth=1)
         global chb1,chb2,chb3,chb4
         if n in books_q:
-            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
+            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
             label.grid(row=4,column=2)
-            labelQ=Label(rootm,text=books_q[n],font=("Pristina",25,'bold'))
+            labelQ=Label(rootm,text=books_q[n],font=("Pristina",25,'bold'),fg='white',bg='#230045')
             labelQ.grid(row=6,column=2)
             ch=IntVar()
             
-            chb1=Radiobutton(rootm,variable=ch,value=1,text=books_a[n][1],command=lambda: sel(chb1,books_a,rootm,'./images/bcrt.png','./images/bwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb1=Radiobutton(rootm,variable=ch,value=1,text=books_a[n][1],command=lambda: sel(chb1,books_a,rootm,'./images/bcrt.png','./images/bwrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb1.grid(row=10,column=2)
-            chb2=Radiobutton(rootm,variable=ch,value=2,text=books_a[n][2],command=lambda: sel(chb2,books_a,rootm,'./images/bcrt.png','./images/bwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb2=Radiobutton(rootm,variable=ch,value=2,text=books_a[n][2],command=lambda: sel(chb2,books_a,rootm,'./images/bcrt.png','./images/bwrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb2.grid(row=11,column=2)
-            chb3=Radiobutton(rootm,variable=ch,value=3,text=books_a[n][3],command=lambda: sel(chb3,books_a,rootm,'./images/bcrt.png','./images/bwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb3=Radiobutton(rootm,variable=ch,value=3,text=books_a[n][3],command=lambda: sel(chb3,books_a,rootm,'./images/bcrt.png','./images/bwrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb3.grid(row=12,column=2)
-            chb4=Radiobutton(rootm,variable=ch,value=4,text=books_a[n][4],command=lambda: sel(chb4,books_a,rootm,'./images/bcrt.png','./images/bwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb4=Radiobutton(rootm,variable=ch,value=4,text=books_a[n][4],command=lambda: sel(chb4,books_a,rootm,'./images/bcrt.png','./images/bwrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb4.grid(row=13,column=2)
 
         
@@ -224,21 +238,28 @@ def M():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
+        bgq=Image.open('./images/quiz_pic.png')
+        bgq=bgq.resize((1450,900))
+        bgq_root=ImageTk.PhotoImage(bgq)
+
+        bgq_label=Label(rootm,image=bgq_root,bg='#230045')
+        bgq_label.image=bgq_root
+        bgq_label.place(x=0,y=0,relwidth=1)
         global chb1,chb2,chb3,chb4
         if n in movie_q:
-            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
+            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
             label.grid(row=4,column=2)
-            labelQ=Label(rootm,text=movie_q[n],font=("Pristina",25,'bold'))
+            labelQ=Label(rootm,text=movie_q[n],font=("Pristina",25,'bold'),fg='white',bg='#230045')
             labelQ.grid(row=6,column=2)
             ch=IntVar()
             
-            chb1=Radiobutton(rootm,variable=ch,value=1,text=movie_a[n][1],command=lambda: sel(chb1,movie_a,rootm,'./images/mcrt.png','./images/mwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb1=Radiobutton(rootm,variable=ch,value=1,text=movie_a[n][1],command=lambda: sel(chb1,movie_a,rootm,'./images/mcrt.png','./images/mwrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb1.grid(row=10,column=2)
-            chb2=Radiobutton(rootm,variable=ch,value=2,text=movie_a[n][2],command=lambda: sel(chb2,movie_a,rootm,'./images/mcrt.png','./images/mwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb2=Radiobutton(rootm,variable=ch,value=2,text=movie_a[n][2],command=lambda: sel(chb2,movie_a,rootm,'./images/mcrt.png','./images/mwrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb2.grid(row=11,column=2)
-            chb3=Radiobutton(rootm,variable=ch,value=3,text=movie_a[n][3],command=lambda: sel(chb3,movie_a,rootm,'./images/mcrt.png','./images/mwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb3=Radiobutton(rootm,variable=ch,value=3,text=movie_a[n][3],command=lambda: sel(chb3,movie_a,rootm,'./images/mcrt.png','./images/mwrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb3.grid(row=12,column=2)
-            chb4=Radiobutton(rootm,variable=ch,value=4,text=movie_a[n][4],command=lambda: sel(chb4,movie_a,rootm,'./images/mcrt.png','./images/mwrg.png'),padx=105,font=("Cascadia Code",15))
+            chb4=Radiobutton(rootm,variable=ch,value=4,text=movie_a[n][4],command=lambda: sel(chb4,movie_a,rootm,'./images/mcrt.png','./images/mwrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb4.grid(row=13,column=2)
 
         
@@ -259,21 +280,28 @@ def S():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
+        bgq=Image.open('./images/quiz_pic.png')
+        bgq=bgq.resize((1450,900))
+        bgq_root=ImageTk.PhotoImage(bgq)
+
+        bgq_label=Label(rootm,image=bgq_root,bg='#230045')
+        bgq_label.image=bgq_root
+        bgq_label.place(x=0,y=0,relwidth=1)
         global chb1,chb2,chb3,chb4
         if n in sports_q:
-            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
+            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
             label.grid(row=4,column=2)
-            labelQ=Label(rootm,text=sports_q[n],font=("Pristina",25,'bold'))
+            labelQ=Label(rootm,text=sports_q[n],font=("Pristina",25,'bold'),fg='white',bg='#230045')
             labelQ.grid(row=6,column=2)
             ch=IntVar()
             
-            chb1=Radiobutton(rootm,variable=ch,value=1,text=sports_a[n][1],command=lambda: sel(chb1,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15))
+            chb1=Radiobutton(rootm,variable=ch,value=1,text=sports_a[n][1],command=lambda: sel(chb1,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb1.grid(row=10,column=2)
-            chb2=Radiobutton(rootm,variable=ch,value=2,text=sports_a[n][2],command=lambda: sel(chb2,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15))
+            chb2=Radiobutton(rootm,variable=ch,value=2,text=sports_a[n][2],command=lambda: sel(chb2,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb2.grid(row=11,column=2)
-            chb3=Radiobutton(rootm,variable=ch,value=3,text=sports_a[n][3],command=lambda: sel(chb3,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15))
+            chb3=Radiobutton(rootm,variable=ch,value=3,text=sports_a[n][3],command=lambda: sel(chb3,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb3.grid(row=12,column=2)
-            chb4=Radiobutton(rootm,variable=ch,value=4,text=sports_a[n][4],command=lambda: sel(chb4,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15))
+            chb4=Radiobutton(rootm,variable=ch,value=4,text=sports_a[n][4],command=lambda: sel(chb4,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb4.grid(row=13,column=2)
 
         
@@ -295,21 +323,28 @@ def S():
     bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
     def qa(n):
         clear(rootm)
+        bgq=Image.open('./images/quiz_pic.png')
+        bgq=bgq.resize((1450,900))
+        bgq_root=ImageTk.PhotoImage(bgq)
+
+        bgq_label=Label(rootm,image=bgq_root,bg='#230045')
+        bgq_label.image=bgq_root
+        bgq_label.place(x=0,y=0,relwidth=1)
         global chb1,chb2,chb3,chb4
         if n in sports_q:
-            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16))
+            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
             label.grid(row=4,column=2)
-            labelQ=Label(rootm,text=sports_q[n],font=("Pristina",25,'bold'))
+            labelQ=Label(rootm,text=sports_q[n],font=("Pristina",25,'bold'),fg='white',bg='#230045')
             labelQ.grid(row=6,column=2)
             ch=IntVar()
             
-            chb1=Radiobutton(rootm,variable=ch,value=1,text=sports_a[n][1],command=lambda: sel(chb1,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15))
+            chb1=Radiobutton(rootm,variable=ch,value=1,text=sports_a[n][1],command=lambda: sel(chb1,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb1.grid(row=10,column=2)
-            chb2=Radiobutton(rootm,variable=ch,value=2,text=sports_a[n][2],command=lambda: sel(chb2,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15))
+            chb2=Radiobutton(rootm,variable=ch,value=2,text=sports_a[n][2],command=lambda: sel(chb2,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb2.grid(row=11,column=2)
-            chb3=Radiobutton(rootm,variable=ch,value=3,text=sports_a[n][3],command=lambda: sel(chb3,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15))
+            chb3=Radiobutton(rootm,variable=ch,value=3,text=sports_a[n][3],command=lambda: sel(chb3,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb3.grid(row=12,column=2)
-            chb4=Radiobutton(rootm,variable=ch,value=4,text=sports_a[n][4],command=lambda: sel(chb4,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15))
+            chb4=Radiobutton(rootm,variable=ch,value=4,text=sports_a[n][4],command=lambda: sel(chb4,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
             chb4.grid(row=13,column=2)
 
         
