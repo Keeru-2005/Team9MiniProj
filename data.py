@@ -7,7 +7,7 @@ travel_q={1:'What is the capital of Australia?',
           6:'In which country would you find the famous Shibuya Crossing?',
           7:'The Ajanta Caves, known for their Buddhist cave paintings, are in which Indian state?',
           8:'The Louvre,an art and civilization museum,is located in which Middle Eastern country?',
-          9:'Yellowstone National Park, known for its geothermal features, is primarily located in which U.S. state?',
+          9:'Yellowstone National Park, known for its geothermal features,\n is primarily located in which U.S. state?',
           10:'How many pyramids are there at the Giza Plateau in Egypt?'}
 
 travel_a={1:('Canberra','Melbourne','Perth','Canberra','Sydney'),
@@ -29,7 +29,7 @@ movie_q={1:'What is the name of the fictional African country in the movie "Blac
          3:"Which Disney Princess is known for her long, magical hair?",
          4:"What is the real name of the character Iron Man?",
          5:"What is the name of the paranormal investigators featured in 'The Conjuring' series?",
-         6:"'Bade bade deshon mein aisi chhoti chhoti baatein hoti rehti hai, Senorita.', is a famous dialogue of which of the following movies?",
+         6:"'Bade bade deshon mein aisi chhoti chhoti baatein hoti rehti hai, Senorita.',\n is a famous dialogue of which of the following movies?",
          7:"What was the name of Yash's character in the movie “KGF:chapter 1”",
          8:"""Which movie is considered as the longest-running film in the history of Indian cinema which is being screened in a theatre as of 2023, \n marking 28years of the movie?""",
          9:"A recent movie to surpass a $1billion box office:",
@@ -52,12 +52,12 @@ movie_a={1:('Wakanda','kenya','Ghana','Wakanda','naruba'),
 books_q={1:" J.R.R. Tolkien wrote 'The Hobbit.' What is the name of the hobbit protagonist?",
          2:"What is the name of the magical creature that guides Harry Potter to Platform 9 3/4?",
          3:"What is the name of the camp where Percy and other demigods are trained?",
-         4:"In which book does Ruskin Bond introduce the character Rusty, a young boy who becomes a recurring figure in many of his stories?",
+         4:"In which book does Ruskin Bond introduce the character Rusty,\n a young boy who becomes a recurring figure in many of his stories?",
          5:"Name Greg Heffley's older brother in the Series 'The Diary of a Wimpy Kid'?",
          6:"Which Character In the series 'Charlie and The Chocolate Factory' eats a piece of gum and turns into a blueberry?",
          7:"What is Nancy's father's profession in the series 'Nancy Drew'?",
          8:"Who is the author of the series 'The Hardy Boys'?",
-         9:"Alongside Hercule Poirot, Agatha Christie created another famous detective character. What is the name of this other detective?",
+         9:"Alongside Hercule Poirot, Agatha Christie created another famous detective character.\n What is the name of this other detective?",
          10:"Which March sister gets married first, in the book 'Little Women'?"}
 
 books_a={1:("Bilbo Baggins","Frodo Baggins","Gandalf","Bilbo Baggins","Smaug"),
@@ -98,15 +98,15 @@ python_a={1:('/* Comment */','// Comment','/* Comment */','# Comment','-- Commen
 
 #SPORTS
 
-sports_q={1:' Who is the only player to have scored a century in all three formats of international cricket (Tests, ODIs, T20Is)?',
+sports_q={1:' Who is the only player to have scored a century in all three formats\n of international cricket (Tests, ODIs, T20Is)?',
           2:' Which stadium is known as the "Home of Cricket"?',
           3:" Which player has won the most Ballon d'Or awards?",
           4:" Who holds the record for the highest individual score in a Test inning? ", 
           5:"Who is the all-time leading goal scorer for the Brazilian national team? ", 
           6:"In tennis scoring, what does '40-30' represent?",
           7:"Which Grand Slam tournament is played on grass courts?",
-          8:"Who is the first male player from India to win a silver medal in badminton at the Olympic Games?",
-          9:"In which sport did Abhinav Bindra win India's first individual gold medal at the Olympic Games?",
+          8:"Who is the first male player from India to win a silver medal \nin badminton at the Olympic Games?",
+          9:"In which sport did Abhinav Bindra win India's first individual \ngold medal at the Olympic Games?",
          10:"Who is the first Indian cricketer to take 10 wickets in a Test inning?"}
 
 

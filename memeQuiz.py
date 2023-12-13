@@ -21,6 +21,7 @@ ltest.place(x=600,y=200)
 n=1     
 score=0 
 index=1
+
 def crt_wrg_meme(rootm,filename):
     crtmeme=Image.open(filename)
     crtmeme=crtmeme.resize((400,400))
@@ -28,6 +29,7 @@ def crt_wrg_meme(rootm,filename):
     crtlabel=Label(rootm,image=p)
     crtlabel.image=p
     crtlabel.grid(row=25,column=2)
+
 def sel(chb,ans,rootm,crt,wrg):
     global index,score
     if index in ans:
@@ -39,6 +41,7 @@ def sel(chb,ans,rootm,crt,wrg):
             disableButtons('disabled')
             crt_wrg_meme(rootm,wrg)
     index+=1
+
 def disableButtons(state):
     chb1['state']=state
     chb2['state']=state
@@ -47,6 +50,7 @@ def disableButtons(state):
 def clear(root):
     for child in root.winfo_children():
         child.destroy()
+
 def openimg(rootm,f):
     img=Image.open(f)
     img=img.resize((450,450))
@@ -68,7 +72,6 @@ def T():
     rootm=Toplevel()
     rootm.state('zoomed')
     rootm.configure(bg='#230045')
-    
     def qa(n):
         clear(rootm)
         bgq=Image.open('./images/quiz_pic.png')
@@ -99,10 +102,11 @@ def T():
             nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
             nextB.grid(row=20,column=2)
         else:
-            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20)
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20,fg='white',bg='#230045')
             sclabel.grid(row=23,column=2)
             final_score_meme(rootm,score,travel_f)
     qa(n)
+
 def P():
     rootm=Toplevel()
     rootm.state('zoomed')
@@ -138,18 +142,15 @@ def P():
             nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
             nextB.grid(row=20,column=2)
         else:
-            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20)
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20,fg='white',bg='#230045')
             sclabel.grid(row=23,column=2)
             final_score_meme(rootm,score,python_f)
     qa(n)
+
 def A():
     rootm=Toplevel()
     rootm.state('zoomed')
-    bgq=Image.open('./images/quiz_pic.png')
-    bgq=bgq.resize((100,90))
-    bgq_root=ImageTk.PhotoImage(bgq)
-    bgq_label=Label(rootm, image=bgq_root)
-    bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
+    rootm.configure(bg='#230045')
     def qa(n):
         clear(rootm)
         bgq=Image.open('./images/quiz_pic.png')
@@ -180,7 +181,7 @@ def A():
             nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
             nextB.grid(row=20,column=2)
         else:
-            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20)
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20,fg='white',bg='#230045')
             sclabel.grid(row=23,column=2)
             final_score_meme(rootm,score,animals_f)
     qa(n)
@@ -188,11 +189,7 @@ def A():
 def B():
     rootm=Toplevel()
     rootm.state('zoomed')
-    bgq=Image.open('./images/quiz_pic.png')
-    bgq=bgq.resize((100,90))
-    bgq_root=ImageTk.PhotoImage(bgq)
-    bgq_label=Label(rootm, image=bgq_root)
-    bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
+    rootm.configure(bg='#230045')
     def qa(n):
         clear(rootm)
         bgq=Image.open('./images/quiz_pic.png')
@@ -223,7 +220,7 @@ def B():
             nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
             nextB.grid(row=20,column=2)
         else:
-            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20)
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20,fg='white',bg='#230045')
             sclabel.grid(row=23,column=2)
             final_score_meme(rootm,score,books_f)
     qa(n)
@@ -231,11 +228,7 @@ def B():
 def M():
     rootm=Toplevel()
     rootm.state('zoomed')
-    bgq=Image.open('./images/quiz_pic.png')
-    bgq=bgq.resize((100,90))
-    bgq_root=ImageTk.PhotoImage(bgq)
-    bgq_label=Label(rootm, image=bgq_root)
-    bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
+    rootm.configure(bg='#230045')
     def qa(n):
         clear(rootm)
         bgq=Image.open('./images/quiz_pic.png')
@@ -266,18 +259,15 @@ def M():
             nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
             nextB.grid(row=20,column=2)
         else:
-            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20)
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20,fg='white',bg='#230045')
             sclabel.grid(row=23,column=2)
             final_score_meme(rootm,score,movie_f)
     qa(n)
+
 def S():
     rootm=Toplevel()
     rootm.state('zoomed')
-    bgq=Image.open('./images/quiz_pic.png')
-    bgq=bgq.resize((100,90))
-    bgq_root=ImageTk.PhotoImage(bgq)
-    bgq_label=Label(rootm, image=bgq_root)
-    bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
+    rootm.configure(bg='#230045')
     def qa(n):
         clear(rootm)
         bgq=Image.open('./images/quiz_pic.png')
@@ -308,7 +298,7 @@ def S():
             nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
             nextB.grid(row=20,column=2)
         else:
-            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+"/100",font="Georgia 20 ",padx=550,pady= 20)
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+"/100",font="Georgia 20 ",padx=550,pady= 20,fg='white',bg='#230045')
             sclabel.grid(row=23,column=2)
             final_score_meme(rootm,score,sports_f)
     qa(n)
@@ -316,11 +306,7 @@ def S():
 def S():
     rootm=Toplevel()
     rootm.state('zoomed')
-    bgq=Image.open('./images/quiz_pic.png')
-    bgq=bgq.resize((100,90))
-    bgq_root=ImageTk.PhotoImage(bgq)
-    bgq_label=Label(rootm, image=bgq_root)
-    bgq_label.place(x=0,y=0,relwidth=1,relheight=1)
+    rootm.configure(bg='#230045')
     def qa(n):
         clear(rootm)
         bgq=Image.open('./images/quiz_pic.png')
@@ -351,7 +337,7 @@ def S():
             nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
             nextB.grid(row=20,column=2)
         else:
-            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20)
+            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20,fg='white',bg='#230045')
             sclabel.grid(row=23,column=2)
             final_score_meme(rootm,score,sports_f)
     qa(n)
