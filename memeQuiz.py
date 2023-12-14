@@ -85,8 +85,7 @@ def T():
         bgq_label.place(x=0,y=0,relwidth=1)
         global chb1,chb2,chb3,chb4
         if n in travel_q:
-            ex=Button(rootm,text='EXIT',command=exit,font="Times 18 bold")
-            ex.grid(row=6,column=4,padx=80)
+            
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
             label.grid(row=6,column=2)
             
@@ -103,9 +102,11 @@ def T():
             chb4=Radiobutton(rootm,variable=ch,value=4,text=travel_a[n][4],command=lambda: sel(chb4,travel_a,rootm,'./images/tcrt.png','./images/twrg.png'),font=("Cascadia Code",15),fg='white',bg='#230045')
             chb4.grid(row=16,column=2)
 
-        
+            
             nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
             nextB.grid(row=20,column=2)
+            ex=Button(rootm,text='EXIT',command=exit,font="Times 18 bold")
+            ex.grid(row=60,column=2)
             
         else:
             sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20,fg='white',bg='#230045')
@@ -129,7 +130,7 @@ def P():
         global chb1,chb2,chb3,chb4
         if n in python_q:
             ex=Button(rootm,text='EXIT',command=exit,font="Times 18 bold")
-            ex.grid(row=6,column=4,padx=80)
+            ex.grid(row=60,column=2)
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
             label.grid(row=6,column=2)
             labelQ=Label(rootm,text=python_q[n],font=("Pristina",24,'bold'),fg='white',bg='#230045',wraplength=1200)
@@ -173,7 +174,7 @@ def A():
         global chb1,chb2,chb3,chb4
         if n in animals_q:
             ex=Button(rootm,text='EXIT',command=exit,font="Times 18 bold")
-            ex.grid(row=6,column=4,padx=80)
+            ex.grid(row=60,column=2)
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
             label.grid(row=6,column=2)
             labelQ=Label(rootm,text=animals_q[n],font=("Pristina",25,'bold'),fg='white',bg='#230045')
@@ -218,7 +219,7 @@ def B():
         global chb1,chb2,chb3,chb4
         if n in books_q:
             ex=Button(rootm,text='EXIT',command=exit,font="Times 18 bold")
-            ex.grid(row=6,column=4,padx=80)
+            ex.grid(row=60,column=2)
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
             label.grid(row=6,column=2)
             labelQ=Label(rootm,text=books_q[n],font=("Pristina",25,'bold'),fg='white',bg='#230045',wraplength=1200)
@@ -263,7 +264,7 @@ def M():
         global chb1,chb2,chb3,chb4
         if n in movie_q:
             ex=Button(rootm,text='EXIT',command=exit,font="Times 18 bold")
-            ex.grid(row=6,column=4,padx=80)
+            ex.grid(row=60,column=2)
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
             label.grid(row=6,column=2)
             labelQ=Label(rootm,text=movie_q[n],font=("Pristina",25,'bold'),fg='white',bg='#230045',wraplength=1200)
@@ -307,7 +308,7 @@ def S():
         global chb1,chb2,chb3,chb4
         if n in sports_q:
             ex=Button(rootm,text='EXIT',command=exit,font="Times 18 bold")
-            ex.grid(row=6,column=4,padx=80)
+            ex.grid(row=60,column=2)
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
             label.grid(row=6,column=2)
             labelQ=Label(rootm,text=sports_q[n],font=("Pristina",25,'bold'),fg='white',bg='#230045',wraplength=1200)
