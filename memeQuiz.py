@@ -85,8 +85,11 @@ def T():
         bgq_label.place(x=0,y=0,relwidth=1)
         global chb1,chb2,chb3,chb4
         if n in travel_q:
+            ex=Button(rootm,text='EXIT',command=exit,font="Times 18 bold")
+            ex.grid(row=6,column=4,padx=80)
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
             label.grid(row=6,column=2)
+            
             labelQ=Label(rootm,text=travel_q[n],font=("Pristina",24,'bold'),fg='white',bg='#230045',wraplength=1200)
             labelQ.grid(row=8,column=2,pady=20)
             ch=IntVar()
@@ -103,6 +106,7 @@ def T():
         
             nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
             nextB.grid(row=20,column=2)
+            
         else:
             sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20,fg='white',bg='#230045')
             sclabel.grid(row=23,column=2)
@@ -124,8 +128,10 @@ def P():
         bgq_label.place(x=0,y=0,relwidth=1)
         global chb1,chb2,chb3,chb4
         if n in python_q:
+            ex=Button(rootm,text='EXIT',command=exit,font="Times 18 bold")
+            ex.grid(row=6,column=4,padx=80)
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
-            label.grid(row=4,column=2)
+            label.grid(row=6,column=2)
             labelQ=Label(rootm,text=python_q[n],font=("Pristina",24,'bold'),fg='white',bg='#230045',wraplength=1200)
             labelQ.grid(row=8,column=2,pady=20)
             ch=IntVar()
@@ -166,8 +172,10 @@ def A():
         bgq_label.place(x=0,y=0,relwidth=1)
         global chb1,chb2,chb3,chb4
         if n in animals_q:
+            ex=Button(rootm,text='EXIT',command=exit,font="Times 18 bold")
+            ex.grid(row=6,column=4,padx=80)
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
-            label.grid(row=4,column=2)
+            label.grid(row=6,column=2)
             labelQ=Label(rootm,text=animals_q[n],font=("Pristina",25,'bold'),fg='white',bg='#230045')
             labelQ.grid(row=8,column=2,pady=20)
             ch=IntVar()
@@ -209,8 +217,10 @@ def B():
         bgq_label.place(x=0,y=0,relwidth=1)
         global chb1,chb2,chb3,chb4
         if n in books_q:
+            ex=Button(rootm,text='EXIT',command=exit,font="Times 18 bold")
+            ex.grid(row=6,column=4,padx=80)
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
-            label.grid(row=4,column=2)
+            label.grid(row=6,column=2)
             labelQ=Label(rootm,text=books_q[n],font=("Pristina",25,'bold'),fg='white',bg='#230045',wraplength=1200)
             labelQ.grid(row=8,column=2,pady=20)
             ch=IntVar()
@@ -252,8 +262,10 @@ def M():
         bgq_label.place(x=0,y=0,relwidth=1)
         global chb1,chb2,chb3,chb4
         if n in movie_q:
+            ex=Button(rootm,text='EXIT',command=exit,font="Times 18 bold")
+            ex.grid(row=6,column=4,padx=80)
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
-            label.grid(row=4,column=2)
+            label.grid(row=6,column=2)
             labelQ=Label(rootm,text=movie_q[n],font=("Pristina",25,'bold'),fg='white',bg='#230045',wraplength=1200)
             labelQ.grid(row=8,column=2,pady=20)
             ch=IntVar()
@@ -294,8 +306,10 @@ def S():
         bgq_label.place(x=0,y=0,relwidth=1)
         global chb1,chb2,chb3,chb4
         if n in sports_q:
+            ex=Button(rootm,text='EXIT',command=exit,font="Times 18 bold")
+            ex.grid(row=6,column=4,padx=80)
             label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
-            label.grid(row=4,column=2)
+            label.grid(row=6,column=2)
             labelQ=Label(rootm,text=sports_q[n],font=("Pristina",25,'bold'),fg='white',bg='#230045',wraplength=1200)
             labelQ.grid(row=8,column=2,pady=20)
             ch=IntVar()
