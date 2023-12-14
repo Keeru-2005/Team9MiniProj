@@ -146,7 +146,7 @@ def P():
             sclabel.grid(row=23,column=2)
             final_score_meme(rootm,score,python_f)
     qa(n)
-
+    
 def A():
     rootm=Toplevel()
     rootm.state('zoomed')
@@ -303,44 +303,6 @@ def S():
             final_score_meme(rootm,score,sports_f)
     qa(n)
 
-def S():
-    rootm=Toplevel()
-    rootm.state('zoomed')
-    rootm.configure(bg='#230045')
-    def qa(n):
-        clear(rootm)
-        bgq=Image.open('./images/quiz_pic.png')
-        bgq=bgq.resize((1450,900))
-        bgq_root=ImageTk.PhotoImage(bgq)
-
-        bgq_label=Label(rootm,image=bgq_root,bg='#230045')
-        bgq_label.image=bgq_root
-        bgq_label.place(x=0,y=0,relwidth=1)
-        global chb1,chb2,chb3,chb4
-        if n in sports_q:
-            label=Label(rootm,text='Your question:',padx=600,font=("Rockwell",16),fg='white',bg='#230045')
-            label.grid(row=4,column=2)
-            labelQ=Label(rootm,text=sports_q[n],font=("Pristina",25,'bold'),fg='white',bg='#230045')
-            labelQ.grid(row=6,column=2)
-            ch=IntVar()
-            
-            chb1=Radiobutton(rootm,variable=ch,value=1,text=sports_a[n][1],command=lambda: sel(chb1,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
-            chb1.grid(row=10,column=2)
-            chb2=Radiobutton(rootm,variable=ch,value=2,text=sports_a[n][2],command=lambda: sel(chb2,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
-            chb2.grid(row=11,column=2)
-            chb3=Radiobutton(rootm,variable=ch,value=3,text=sports_a[n][3],command=lambda: sel(chb3,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
-            chb3.grid(row=12,column=2)
-            chb4=Radiobutton(rootm,variable=ch,value=4,text=sports_a[n][4],command=lambda: sel(chb4,sports_a,rootm,'./images/scrt.png','./images/swrg.png'),padx=105,font=("Cascadia Code",15),fg='white',bg='#230045')
-            chb4.grid(row=13,column=2)
-
-        
-            nextB=Button(rootm,text="NEXT",command=lambda:qa(n+1),font="Times 15 bold")
-            nextB.grid(row=20,column=2)
-        else:
-            sclabel=Label(rootm,text=" YOUR SCORE : "+str(score)+'/100',font="Georgia 20 ",padx=550,pady= 20,fg='white',bg='#230045')
-            sclabel.grid(row=23,column=2)
-            final_score_meme(rootm,score,sports_f)
-    qa(n)
 
 
 
