@@ -58,7 +58,7 @@ def openimg(rootm,f):
     photo=ImageTk.PhotoImage(img)
     photo_label=Label(rootm,image=photo)
     photo_label.image=photo
-    photo_label.grid(row=3,column=2)
+    photo_label.grid(row=300,column=2)
 lst=[10,20,30,40,50,60,70,80,90,100]
 
 def final_score_meme(rootm,score,final):
