@@ -1,2 +1,2 @@
-# Team9MiniProj
+# Meme Quiz
 MEME QUIZ
